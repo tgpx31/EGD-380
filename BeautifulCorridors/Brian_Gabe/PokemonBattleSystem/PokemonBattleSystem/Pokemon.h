@@ -22,7 +22,7 @@ public:
 	inline int getSpDefence() { return mSpDefence; };
 	inline int getSpeed() { return mSpeed; };
 
-	inline Move& getMove(int moveNum) { return moveList[moveNum]; };
+	inline Move* getMove(int moveNum) { return moveList[moveNum]; };
 
 	inline Type getType() { return mType; };
 

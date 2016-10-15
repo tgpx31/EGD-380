@@ -13,9 +13,6 @@ struct Move
 	int mPP;
 
 	bool isSpecial;
-
-	Move();
-	~Move();
 };
 
 #endif
