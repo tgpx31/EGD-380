@@ -10,34 +10,36 @@
 class Pokemon
 {
 public:
+	~Pokemon();
+
 	inline void modifyHealth(int change) { mHealth += change; };
 
 	inline int getHealth() { return mHealth; };
 	inline int getAttack() { return mAttack; };
 	inline int getSpAttack() { return mSpAttack; };
-	inline int getDefence() { return mDefence; };
-	inline int getSpDefence() { return mSpDefence; };
+	inline int getDefense() { return mDefense; };
+	inline int getSpDefense() { return mSpDefense; };
 	inline int getSpeed() { return mSpeed; };
 
-	inline Move* getMove(int moveNum) { return moveList[moveNum]; };
+	inline Move* getMove(int moveNum) { return mpMoveList[moveNum]; };
 
-	inline Type getType() { return mType; };
+	inline Type getType(int pos) { return mType[pos]; };
 
 	void useMove(int index, Pokemon* target);
 	void doDamage(Move* move, Pokemon* Other);
 
-private:
+protected:
 	std::string mName;
 
 	int mHealth;
 	int mAttack;
 	int mSpAttack;
-	int mDefence;
-	int mSpDefence;
+	int mDefense;
+	int mSpDefense;
 	int mSpeed;
 
-	Move* moveList[4];
-	Type mType;
+	Move* mpMoveList[4];
+	Type mType[2];
 
 	const static int LEVEL = 100;
 	const static int MIN_RAND_NUM = 85;

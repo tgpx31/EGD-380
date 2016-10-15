@@ -1,19 +1,25 @@
 #include "Pokemon.h"
 
+Pokemon::~Pokemon()
+{
+	for (auto i : mpMoveList)
+		delete i;
+}
+
 void Pokemon::useMove(int index, Pokemon* target)
 {
 	// Can they actually use the move?
-	if (moveList[index]->mPP <= 0) { return; }
+	if (mpMoveList[index]->mPP <= 0) { return; }
 
 	// Will the move hit?
 	// check the accuracy, calculate if hit is success
 
 		// Calculate the damage and apply to other
-		doDamage(moveList[index], target);
+		doDamage(mpMoveList[index], target);
 		// reduce the PP of the move
-		--moveList[index]->mPP;
-		if (moveList[index]->mPP <= 0)
-			moveList[index]->mPP = 0;
+		--mpMoveList[index]->mPP;
+		if (mpMoveList[index]->mPP <= 0)
+			mpMoveList[index]->mPP = 0;
 }
 
 void Pokemon::doDamage(Move* move, Pokemon* Other)
@@ -36,9 +42,9 @@ void Pokemon::doDamage(Move* move, Pokemon* Other)
 
 	//((((2 * Level / 5 + 2) * AttackStat * AttackPower / DefenseStat) / 50) + 2) * STAB * Weakness / Resistance * RandomNumber / 100
 	if (move->isSpecial)
-		damage = ((((2 * LEVEL / 5 + 2) * getSpAttack() * move->mPower / getSpDefence()) / 50) + 2) * STAB_MULT * weakness * randNumber / 100;
+		damage = ((((2 * LEVEL / 5 + 2) * getSpAttack() * move->mPower / getSpDefense()) / 50) + 2) * STAB_MULT * weakness * randNumber / 100;
 	else
-		damage = ((((2 * LEVEL / 5 + 2) * getAttack() * move->mPower / getDefence()) / 50) + 2) * STAB_MULT * weakness * randNumber / 100;
+		damage = ((((2 * LEVEL / 5 + 2) * getAttack() * move->mPower / getDefense()) / 50) + 2) * STAB_MULT * weakness * randNumber / 100;
 
 	Other->modifyHealth(damage);
 }

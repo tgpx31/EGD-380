@@ -13,16 +13,34 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Pokemon">
+      <UniqueIdentifier>{3a2c5ddf-9aee-455a-ac5c-b48ed512bd44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Base Classes">
+      <UniqueIdentifier>{120d1742-9a05-44d0-9857-8a29750e15de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Util">
+      <UniqueIdentifier>{fd0dcb71-5959-43f1-b35a-ee569aaf1a71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Base Classes">
+      <UniqueIdentifier>{fb394048-14ed-4327-a896-a82818a038fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pokemon">
+      <UniqueIdentifier>{8ff45632-2890-458e-a5b6-fb66a568d155}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Move.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Slowbro.h">
+      <Filter>Header Files\Pokemon</Filter>
     </ClInclude>
     <ClInclude Include="Pokemon.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Base Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Move.h">
+      <Filter>Header Files\Base Classes</Filter>
     </ClInclude>
     <ClInclude Include="Type.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Util</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -30,7 +48,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Pokemon.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Base Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Slowbro.cpp">
+      <Filter>Source Files\Pokemon</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

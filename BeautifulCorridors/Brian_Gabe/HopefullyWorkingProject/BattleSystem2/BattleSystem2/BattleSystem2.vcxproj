@@ -120,11 +120,13 @@
   <ItemGroup>
     <ClInclude Include="Move.h" />
     <ClInclude Include="Pokemon.h" />
+    <ClInclude Include="Slowbro.h" />
     <ClInclude Include="Type.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pokemon.cpp" />
+    <ClCompile Include="Slowbro.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
