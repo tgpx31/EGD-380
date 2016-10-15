@@ -11,6 +11,11 @@ struct Move
 	Type mType;
 	int mPower;
 	int mPP;
+
+	bool isSpecial;
+
+	Move();
+	~Move();
 };
 
 #endif

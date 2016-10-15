@@ -5,12 +5,15 @@
 #include "Move.h"
 
 #include <string>
+#include <ctime>
 
 class Pokemon
 {
 public:
 	Pokemon();
 	~Pokemon();
+
+	inline void modifyHealth(int change) { mHealth += change; };
 
 	inline int getHealth() { return mHealth; };
 	inline int getAttack() { return mAttack; };
@@ -23,6 +26,9 @@ public:
 
 	inline Type getType() { return mType; };
 
+	void useMove(int index, Pokemon* target);
+	void doDamage(Move* move, Pokemon* Other);
+
 private:
 	std::string mName;
 
@@ -33,8 +39,14 @@ private:
 	int mSpDefence;
 	int mSpeed;
 
-	Move moveList[4];
+	Move* moveList[4];
 	Type mType;
+
+	const static int LEVEL = 100;
+	const static int MIN_RAND_NUM = 85;
+	const static int MAX_RAND_NUM = 100;
+
+	int randomNumber(int min, int max);
 }
 
 #endif
