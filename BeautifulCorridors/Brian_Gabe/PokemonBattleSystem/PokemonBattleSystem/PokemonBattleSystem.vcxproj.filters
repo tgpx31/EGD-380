@@ -22,21 +22,27 @@
     <Filter Include="Header Files\Util">
       <UniqueIdentifier>{2bbb8bb8-8f4a-43e1-a500-044ecc219cd7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Pokemon">
+      <UniqueIdentifier>{701ea252-5cb3-4bf4-bb6f-64239beac8b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Gabe%27s Stuff\PokemonBattleSystem\PokemonBattleSystem\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\Gabe%27s Stuff\PokemonBattleSystem\PokemonBattleSystem\Move.h">
+    <ClInclude Include="Move.h">
       <Filter>Header Files\Moves</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Gabe%27s Stuff\PokemonBattleSystem\PokemonBattleSystem\Type.h">
-      <Filter>Header Files\Util</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Gabe%27s Stuff\PokemonBattleSystem\PokemonBattleSystem\Pokemon.h">
+    <ClInclude Include="Pokemon.h">
       <Filter>Header Files\Pokemon</Filter>
     </ClInclude>
+    <ClInclude Include="Type.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pokemon.cpp">
+      <Filter>Source Files\Pokemon</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

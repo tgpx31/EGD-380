@@ -9,6 +9,9 @@
 class Pokemon
 {
 public:
+	Pokemon();
+	~Pokemon();
+
 	inline int getHealth() { return mHealth; };
 	inline int getAttack() { return mAttack; };
 	inline int getSpAttack() { return mSpAttack; };

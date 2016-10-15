@@ -1,3 +1,4 @@
+#include "Pokemon.h"
 
 int main()
 {

@@ -18,6 +18,15 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Move.h" />
+    <ClInclude Include="Pokemon.h" />
+    <ClInclude Include="Type.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pokemon.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A4E9FE37-5C41-4762-837A-F4EFDA8353C9}</ProjectGuid>
     <RootNamespace>PokemonBattleSystem</RootNamespace>
@@ -117,14 +126,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\Gabe%27s Stuff\PokemonBattleSystem\PokemonBattleSystem\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\Gabe%27s Stuff\PokemonBattleSystem\PokemonBattleSystem\Move.h" />
-    <ClInclude Include="..\..\..\Gabe%27s Stuff\PokemonBattleSystem\PokemonBattleSystem\Pokemon.h" />
-    <ClInclude Include="..\..\..\Gabe%27s Stuff\PokemonBattleSystem\PokemonBattleSystem\Type.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
