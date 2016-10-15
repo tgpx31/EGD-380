@@ -1,0 +1,6 @@
+﻿  Pokemon.cpp
+c:\users\student\desktop\egd-380\beautifulcorridors\brian_gabe\hopefullyworkingproject\battlesystem2\battlesystem2\pokemon.cpp(26): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\student\desktop\egd-380\beautifulcorridors\brian_gabe\hopefullyworkingproject\battlesystem2\battlesystem2\pokemon.cpp(39): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\student\desktop\egd-380\beautifulcorridors\brian_gabe\hopefullyworkingproject\battlesystem2\battlesystem2\pokemon.cpp(41): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  BattleSystem2.vcxproj -> C:\Users\Student\Desktop\EGD-380\BeautifulCorridors\Brian_Gabe\HopefullyWorkingProject\BattleSystem2\Debug\BattleSystem2.exe
+  BattleSystem2.vcxproj -> C:\Users\Student\Desktop\EGD-380\BeautifulCorridors\Brian_Gabe\HopefullyWorkingProject\BattleSystem2\Debug\BattleSystem2.pdb (Full PDB)
