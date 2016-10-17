@@ -14,9 +14,10 @@ public:
 	~Pokemon();
 
 	inline void modifyHealth(int change) { mCurrentHealth -= change; };
-
+	inline const std::string getName() { return mName; };
 	inline int getHealth() { return mCurrentHealth; };
 	inline int getMaxHealth() { return mMaxHealth; };
+	inline bool didFaint() { return mCurrentHealth <= 0; };
 
 	inline int getAttack() { return mAttack; };
 	inline int getSpAttack() { return mSpAttack; };
@@ -31,6 +32,8 @@ public:
 	void useMove(int index, Pokemon* target);
 	void doDamage(Move* move, Pokemon* Other);
 	float calcResistance(Type moveType, Pokemon* other);
+
+	void displayMoveList();
 
 protected:
 	std::string mName;
@@ -51,7 +54,9 @@ protected:
 	const static int MIN_RAND_NUM = 85;
 	const static int MAX_RAND_NUM = 100;
 
-	int randomNumber(int min, int max);
+	
 };
+
+int randomNumber(int min, int max);
 
 #endif

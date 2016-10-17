@@ -44,7 +44,7 @@ void Pokemon::doDamage(Move* move, Pokemon* Other)
 			// Cap at the maxHealth
 			modifyHealth(getHealth() - getMaxHealth());
 		}
-		std::cout << mName << " healed for " << static_cast<int>(getMaxHealth() / 2) << " HP!\n";
+		std::cout << mName << " healed for " << static_cast<int>(getMaxHealth() / 2) << " HP!\n\n";
 		return;
 	}
 
@@ -60,6 +60,16 @@ void Pokemon::doDamage(Move* move, Pokemon* Other)
 
 	// Is the Other Pokemon weak or resistant?
 	weakness = calcResistance(move->mType, Other);
+	if (weakness > 1)
+		std::cout << "It was SUPER EFFECTIVE!\n";
+	else if(weakness < 1 && weakness > 0)
+		std::cout << "It wasn't very effective...\n";
+	else if (weakness == 0)
+	{
+		std::cout << "But it did nothing!\n";
+		return;
+	}
+		
 
 	// is the move Special?
 	if (move->isSpecial)
@@ -94,7 +104,18 @@ float Pokemon::calcResistance(Type moveType, Pokemon * other)
 	return finalMult;
 }
 
-int Pokemon::randomNumber(int min, int max)
+void Pokemon::displayMoveList()
+{
+	int moveNo = 0;
+	for (auto move : mpMoveList)
+	{
+		std::cout << move->mName << "[" << moveNo << "] ";
+		++moveNo;
+	}
+	std::cout << std::endl;
+}
+
+int randomNumber(int min, int max)
 {
 	return min + (rand() % static_cast<int>(max - min + 1));
 }
