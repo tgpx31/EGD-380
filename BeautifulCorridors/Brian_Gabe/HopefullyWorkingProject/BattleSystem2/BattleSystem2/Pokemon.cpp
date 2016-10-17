@@ -33,7 +33,7 @@ void Pokemon::doDamage(Move* move, Pokemon* Other)
 	float STAB_MULT = 1;
 
 	// Random number between 85 and 100
-	float randNumber = randomNumber(MIN_RAND_NUM, MAX_RAND_NUM);
+	int randNumber = randomNumber(MIN_RAND_NUM, MAX_RAND_NUM);
 
 	// Check the move used
 	// What's it's power?
@@ -46,9 +46,9 @@ void Pokemon::doDamage(Move* move, Pokemon* Other)
 
 	//((((2 * Level / 5 + 2) * AttackStat * AttackPower / DefenseStat) / 50) + 2) * STAB * Weakness / Resistance * RandomNumber / 100
 	if (move->isSpecial)
-		damage = ((((2 * LEVEL / 5 + 2) * getSpAttack() * move->mPower / getSpDefense()) / 50) + 2) * STAB_MULT * weakness * randNumber / 100;
+		damage = static_cast<int>(((((2 * LEVEL / 5 + 2) * getSpAttack() * move->mPower / getSpDefense()) / 50) + 2) * STAB_MULT * weakness * randNumber / 100);
 	else
-		damage = ((((2 * LEVEL / 5 + 2) * getAttack() * move->mPower / getDefense()) / 50) + 2) * STAB_MULT * weakness * randNumber / 100;
+		damage = static_cast<int>(((((2 * LEVEL / 5 + 2) * getAttack() * move->mPower / getDefense()) / 50) + 2) * STAB_MULT * weakness * randNumber / 100);
 
 	Other->modifyHealth(damage);
 }
