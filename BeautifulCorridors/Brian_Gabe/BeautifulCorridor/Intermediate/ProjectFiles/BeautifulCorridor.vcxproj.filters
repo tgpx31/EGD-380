@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\BeautifulCorridor.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{49A65F8B-3242-4DF9-816D-F5712F437ECD}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\BeautifulCorridor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\BeautifulCorridorEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{5CF3EDAD-2ABB-4072-8B77-1A520273B6E1}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\BeautifulCorridor">
+			<UniqueIdentifier>{1E6E9DBA-64BE-4698-AB2B-C2F20D608013}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\BeautifulCorridor\BeautifulCorridor.Build.cs">
+			<Filter>Source\BeautifulCorridor</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\BeautifulCorridor\BeautifulCorridor.cpp">
+			<Filter>Source\BeautifulCorridor</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BeautifulCorridor\BeautifulCorridor.h">
+			<Filter>Source\BeautifulCorridor</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\BeautifulCorridor\BeautifulCorridorGameMode.cpp">
+			<Filter>Source\BeautifulCorridor</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BeautifulCorridor\BeautifulCorridorGameMode.h">
+			<Filter>Source\BeautifulCorridor</Filter>
+		</ClInclude >
+		<Filter Include="Source\BeautifulCorridor\Private">
+			<UniqueIdentifier>{7C1FD4BF-CE66-4432-A4C2-7EE53C9CFA5E}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\BeautifulCorridor\Private\Pokemon.cpp">
+			<Filter>Source\BeautifulCorridor\Private</Filter>
+		</ClCompile >
+		<Filter Include="Source\BeautifulCorridor\Public">
+			<UniqueIdentifier>{E1176491-09BC-4BBE-975F-53470C641727}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\BeautifulCorridor\Public\Pokemon.h">
+			<Filter>Source\BeautifulCorridor\Public</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
