@@ -28,6 +28,9 @@
     <Filter Include="Source Files\Pokemon">
       <UniqueIdentifier>{8ff45632-2890-458e-a5b6-fb66a568d155}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Moves">
+      <UniqueIdentifier>{b8221d49-79e0-464a-8d66-d4089b698435}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Slowbro.h">
@@ -42,6 +45,33 @@
     <ClInclude Include="Type.h">
       <Filter>Header Files\Util</Filter>
     </ClInclude>
+    <ClInclude Include="Charizard.h">
+      <Filter>Header Files\Pokemon</Filter>
+    </ClInclude>
+    <ClInclude Include="Surf.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
+    <ClInclude Include="SlackOff.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
+    <ClInclude Include="Psychic.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
+    <ClInclude Include="IceBeam.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
+    <ClInclude Include="FireBlast.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
+    <ClInclude Include="Slash.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
+    <ClInclude Include="Bite.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
+    <ClInclude Include="AirCutter.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -49,9 +79,6 @@
     </ClCompile>
     <ClCompile Include="Pokemon.cpp">
       <Filter>Source Files\Base Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Slowbro.cpp">
-      <Filter>Source Files\Pokemon</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

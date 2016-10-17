@@ -118,15 +118,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AirCutter.h" />
+    <ClInclude Include="Bite.h" />
+    <ClInclude Include="Charizard.h" />
+    <ClInclude Include="FireBlast.h" />
+    <ClInclude Include="IceBeam.h" />
     <ClInclude Include="Move.h" />
     <ClInclude Include="Pokemon.h" />
+    <ClInclude Include="Psychic.h" />
+    <ClInclude Include="SlackOff.h" />
+    <ClInclude Include="Slash.h" />
     <ClInclude Include="Slowbro.h" />
+    <ClInclude Include="Surf.h" />
     <ClInclude Include="Type.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pokemon.cpp" />
-    <ClCompile Include="Slowbro.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

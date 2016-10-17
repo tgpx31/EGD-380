@@ -18,6 +18,7 @@ enum class Type
 	psychic,
 	ice,
 	dragon,
+	dark
 };
 
 #endif
