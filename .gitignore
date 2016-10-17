@@ -338,3 +338,6 @@ __pycache__/
 
 ### VisualStudio Patch ###
 build/
+/BeautifulCorridors/Brian_Gabe/BeautifulCorridor/Binaries
+/BeautifulCorridors/Brian_Gabe/BeautifulCorridor/Saved
+/BeautifulCorridors/Brian_Gabe/BeautifulCorridor/Intermediate
