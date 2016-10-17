@@ -10,6 +10,7 @@ struct Move
 	std::string mName;
 	Type mType;
 	int mPower;
+	int mAccuracy;
 	int mPP;
 
 	bool isSpecial;

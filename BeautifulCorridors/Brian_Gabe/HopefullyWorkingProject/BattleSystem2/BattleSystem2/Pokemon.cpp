@@ -13,13 +13,17 @@ void Pokemon::useMove(int index, Pokemon* target)
 
 	// Will the move hit?
 	// check the accuracy, calculate if hit is success
-
+	if (mpMoveList[index]->mAccuracy >= randomNumber(MIN_ACCURACY, MAX_RAND_NUM))
+	{
 		// Calculate the damage and apply to other
 		doDamage(mpMoveList[index], target);
 		// reduce the PP of the move
 		--mpMoveList[index]->mPP;
 		if (mpMoveList[index]->mPP <= 0)
 			mpMoveList[index]->mPP = 0;
+	}
+	else
+		return;
 }
 
 void Pokemon::doDamage(Move* move, Pokemon* Other)
@@ -34,7 +38,7 @@ void Pokemon::doDamage(Move* move, Pokemon* Other)
 	// Check the move used
 	// What's it's power?
 	// Is it the same type as the Pokemon using it?
-	if (move->mType == mType)
+	if (move->mType == mType[0] || move->mType == mType[1])
 		STAB_MULT = 1.5f;
 	else
 		STAB_MULT = 1;

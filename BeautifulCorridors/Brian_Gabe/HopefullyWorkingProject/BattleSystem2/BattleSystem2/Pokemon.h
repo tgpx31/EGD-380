@@ -12,7 +12,7 @@ class Pokemon
 public:
 	~Pokemon();
 
-	inline void modifyHealth(int change) { mHealth += change; };
+	inline void modifyHealth(int change) { mHealth -= change; };
 
 	inline int getHealth() { return mHealth; };
 	inline int getAttack() { return mAttack; };
@@ -42,6 +42,7 @@ protected:
 	Type mType[2];
 
 	const static int LEVEL = 100;
+	const static int MIN_ACCURACY = 0;
 	const static int MIN_RAND_NUM = 85;
 	const static int MAX_RAND_NUM = 100;
 
