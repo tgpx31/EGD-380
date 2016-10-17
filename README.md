@@ -8,5 +8,8 @@ Team:
 * Gabriel Pereyra
 * Lucas Spiker
 
+3D models from
+http://roestudios.co.uk/project/3d-pokemon-models/
+
 ## NAMING CONVENTION STANDARDS
 * ??? Don't know yet
