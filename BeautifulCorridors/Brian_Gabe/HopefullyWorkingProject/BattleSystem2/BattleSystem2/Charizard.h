@@ -15,12 +15,12 @@ public:
 	{
 		mName = "Charizard";
 
-		mMaxHealth = 360;
+		mMaxHealth = 298;
 		mCurrentHealth = mMaxHealth;
-		mAttack = 267;
-		mDefense = 255;
-		mSpAttack = 317;
-		mSpDefense = 269;
+		mAttack = 204;
+		mDefense = 192;
+		mSpAttack = 348;
+		mSpDefense = 185;
 		mSpeed = 299;
 
 		mpMoveList[0] = new FireBlast();

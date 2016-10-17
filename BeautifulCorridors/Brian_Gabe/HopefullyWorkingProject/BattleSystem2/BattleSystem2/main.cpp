@@ -20,6 +20,8 @@ int main()
 
 	while (input >= 0 && !testBro1->didFaint() && !testChar1->didFaint())
 	{
+		// In actual system, compare speed to see who attacks first
+
 		system("CLS");
 		std::cout << testBro1->getName() << " VS. " << testChar1->getName() << std::endl;
 
