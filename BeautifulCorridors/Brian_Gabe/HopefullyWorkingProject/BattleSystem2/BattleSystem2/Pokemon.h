@@ -4,6 +4,7 @@
 #include "Type.h"
 #include "Move.h"
 
+#include <iostream>
 #include <string>
 #include <ctime>
 
@@ -12,9 +13,11 @@ class Pokemon
 public:
 	~Pokemon();
 
-	inline void modifyHealth(int change) { mHealth -= change; };
+	inline void modifyHealth(int change) { mCurrentHealth -= change; };
 
-	inline int getHealth() { return mHealth; };
+	inline int getHealth() { return mCurrentHealth; };
+	inline int getMaxHealth() { return mMaxHealth; };
+
 	inline int getAttack() { return mAttack; };
 	inline int getSpAttack() { return mSpAttack; };
 	inline int getDefense() { return mDefense; };
@@ -27,11 +30,13 @@ public:
 
 	void useMove(int index, Pokemon* target);
 	void doDamage(Move* move, Pokemon* Other);
+	float calcResistance(Type moveType, Pokemon* other);
 
 protected:
 	std::string mName;
 
-	int mHealth;
+	int mMaxHealth;
+	int mCurrentHealth;
 	int mAttack;
 	int mSpAttack;
 	int mDefense;

@@ -10,11 +10,13 @@
 
 class Slowbro : public Pokemon
 {
+public:
 	Slowbro()
 	{
 		mName = "Slowbro";
 
-		mHealth = 394;
+		mMaxHealth = 394;
+		mCurrentHealth = mMaxHealth;
 		mAttack = 249;
 		mDefense = 319;
 		mSpAttack = 299;
@@ -29,6 +31,8 @@ class Slowbro : public Pokemon
 		mType[0] = Type::water;
 		mType[1] = Type::psychic;
 	};
+
+private:
 };
 
 #endif

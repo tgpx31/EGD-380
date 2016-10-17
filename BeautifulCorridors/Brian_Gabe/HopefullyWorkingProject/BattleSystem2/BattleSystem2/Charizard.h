@@ -10,11 +10,13 @@
 
 class Charizard : public Pokemon
 {
+public:
 	Charizard()
 	{
 		mName = "Charizard";
 
-		mHealth = 360;
+		mMaxHealth = 360;
+		mCurrentHealth = mMaxHealth;
 		mAttack = 267;
 		mDefense = 255;
 		mSpAttack = 317;
@@ -29,6 +31,8 @@ class Charizard : public Pokemon
 		mType[0] = Type::fire;
 		mType[1] = Type::flying;
 	};
+
+private:
 };
 
 #endif
