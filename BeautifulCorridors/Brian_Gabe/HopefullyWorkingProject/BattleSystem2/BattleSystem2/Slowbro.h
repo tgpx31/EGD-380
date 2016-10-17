@@ -17,11 +17,11 @@ public:
 
 		mMaxHealth = 394;
 		mCurrentHealth = mMaxHealth;
-		mAttack = 249;
-		mDefense = 319;
-		mSpAttack = 299;
-		mSpDefense = 259;
-		mSpeed = 159;
+		mAttack = 167;
+		mDefense = 350;
+		mSpAttack = 237;
+		mSpDefense = 196;
+		mSpeed = 96;
 
 		mpMoveList[0] = new Surf();
 		mpMoveList[1] = new SlackOff();
