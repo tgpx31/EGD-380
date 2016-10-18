@@ -119,6 +119,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AirCutter.h" />
+    <ClInclude Include="BattleManager.h" />
     <ClInclude Include="Bite.h" />
     <ClInclude Include="Charizard.h" />
     <ClInclude Include="FireBlast.h" />
@@ -133,6 +134,7 @@
     <ClInclude Include="Type.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BattleManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pokemon.cpp" />
   </ItemGroup>

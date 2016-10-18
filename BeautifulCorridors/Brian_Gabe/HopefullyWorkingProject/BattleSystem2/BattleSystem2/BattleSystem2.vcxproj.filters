@@ -72,6 +72,9 @@
     <ClInclude Include="AirCutter.h">
       <Filter>Header Files\Moves</Filter>
     </ClInclude>
+    <ClInclude Include="BattleManager.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -79,6 +82,9 @@
     </ClCompile>
     <ClCompile Include="Pokemon.cpp">
       <Filter>Source Files\Base Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleManager.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,5 +1,7 @@
 #include "Charizard.h"
 #include "Slowbro.h"
+#include "BattleManager.h"
+
 int main()
 {
 	// need to seed for random
@@ -11,6 +13,13 @@ int main()
 	Charizard* testChar1 = new Charizard();
 	Slowbro* testBro1 = new Slowbro();
 
+	BattleSystem testSystem(testBro1, testChar1);
+
+	while (testSystem.update() == false)
+	{
+		//continue battle loop
+	}
+
 	/*testBro1->useMove(0, testChar1);
 	testChar1->useMove(0, testBro1);
 	testBro1->useMove(1, NULL);
@@ -18,68 +27,68 @@ int main()
 
 	
 
-	while (input >= 0 && !testBro1->didFaint() && !testChar1->didFaint())
-	{
-		// In actual system, compare speed to see who attacks first
+	//while (input >= 0 && !testBro1->didFaint() && !testChar1->didFaint())
+	//{
+	//	// In actual system, compare speed to see who attacks first
 
-		system("CLS");
-		std::cout << testBro1->getName() << " VS. " << testChar1->getName() << std::endl;
+	//	system("CLS");
+	//	std::cout << testBro1->getName() << " VS. " << testChar1->getName() << std::endl;
 
-		std::cout << "\nYour move: What should Slowbro do?\n";
-		testBro1->displayMoveList();
+	//	std::cout << "\nYour move: What should Slowbro do?\n";
+	//	testBro1->displayMoveList();
 
-		std::cin >> input;
-		if (testChar1->getSpeed() < testBro1->getSpeed())
-		{
-			if (input < 0)
-				break;
-			else if (input >= 0 && input <= 3)
-				testBro1->useMove(input, testChar1);
+	//	std::cin >> input;
+	//	if (testChar1->getSpeed() < testBro1->getSpeed())
+	//	{
+	//		if (input < 0)
+	//			break;
+	//		else if (input >= 0 && input <= 3)
+	//			testBro1->useMove(input, testChar1);
 
-			std::cout << "\nPress ENTER to continue\n";
-			std::cin.get();
-			std::cin.get();
+	//		std::cout << "\nPress ENTER to continue\n";
+	//		std::cin.get();
+	//		std::cin.get();
 
-			if (testChar1->didFaint())
-				break;
-			compInput = randomNumber(0, 3);
-			testChar1->useMove(compInput, testBro1);
+	//		if (testChar1->didFaint())
+	//			break;
+	//		compInput = randomNumber(0, 3);
+	//		testChar1->useMove(compInput, testBro1);
 
-			std::cout << "\nPress ENTER to continue\n";
-			std::cin.get();
+	//		std::cout << "\nPress ENTER to continue\n";
+	//		std::cin.get();
 
-			if (testBro1->didFaint())
-				break;
-		}
-		else
-		{
-			compInput = randomNumber(0, 3);
-			testChar1->useMove(compInput, testBro1);
+	//		if (testBro1->didFaint())
+	//			break;
+	//	}
+	//	else
+	//	{
+	//		compInput = randomNumber(0, 3);
+	//		testChar1->useMove(compInput, testBro1);
 
-			std::cout << "\nPress ENTER to continue\n";
-			std::cin.get();
+	//		std::cout << "\nPress ENTER to continue\n";
+	//		std::cin.get();
 
-			if (testBro1->didFaint())
-				break;
+	//		if (testBro1->didFaint())
+	//			break;
 
-			if (input < 0)
-				break;
-			else if (input >= 0 && input <= 3)
-				testBro1->useMove(input, testChar1);
+	//		if (input < 0)
+	//			break;
+	//		else if (input >= 0 && input <= 3)
+	//			testBro1->useMove(input, testChar1);
 
-			std::cout << "\nPress ENTER to continue\n";
-			std::cin.get();
-			std::cin.get();
+	//		std::cout << "\nPress ENTER to continue\n";
+	//		std::cin.get();
+	//		std::cin.get();
 
-			if (testChar1->didFaint())
-				break;
-		}
-		
-	}
+	//		if (testChar1->didFaint())
+	//			break;
+	//	}
+	//	
+	//}
 
 
-	delete testChar1;
-	delete testBro1;
+	//delete testChar1;
+	//delete testBro1;
 
 	return 0;
 }
