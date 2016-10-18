@@ -29,25 +29,52 @@ int main()
 		testBro1->displayMoveList();
 
 		std::cin >> input;
-		if (input < 0)
-			break;
-		else if (input >= 0 && input <= 3)
-			testBro1->useMove(input, testChar1);
+		if (testChar1->getSpeed() < testBro1->getSpeed())
+		{
+			if (input < 0)
+				break;
+			else if (input >= 0 && input <= 3)
+				testBro1->useMove(input, testChar1);
 
-		std::cout << "\nPress ENTER to continue\n";
-		std::cin.get();
-		std::cin.get();
+			std::cout << "\nPress ENTER to continue\n";
+			std::cin.get();
+			std::cin.get();
 
-		if (testChar1->didFaint())
-			break;
-		compInput = randomNumber(0, 3);
-		testChar1->useMove(compInput, testBro1);
+			if (testChar1->didFaint())
+				break;
+			compInput = randomNumber(0, 3);
+			testChar1->useMove(compInput, testBro1);
 
-		std::cout << "\nPress ENTER to continue\n";
-		std::cin.get();
+			std::cout << "\nPress ENTER to continue\n";
+			std::cin.get();
 
-		if (testBro1->didFaint())
-			break;
+			if (testBro1->didFaint())
+				break;
+		}
+		else
+		{
+			compInput = randomNumber(0, 3);
+			testChar1->useMove(compInput, testBro1);
+
+			std::cout << "\nPress ENTER to continue\n";
+			std::cin.get();
+
+			if (testBro1->didFaint())
+				break;
+
+			if (input < 0)
+				break;
+			else if (input >= 0 && input <= 3)
+				testBro1->useMove(input, testChar1);
+
+			std::cout << "\nPress ENTER to continue\n";
+			std::cin.get();
+			std::cin.get();
+
+			if (testChar1->didFaint())
+				break;
+		}
+		
 	}
 
 
