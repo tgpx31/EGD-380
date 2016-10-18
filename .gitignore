@@ -1,8 +1,3 @@
-/BeautifulCorridors/Brian_Gabe/PokemonBattleSystem/Debug
-/BeautifulCorridors/Brian_Gabe/PokemonBattleSystem/.vs
-/BeautifulCorridors/Brian_Gabe/PokemonBattleSystem/PokemonBattleSystem.VC.db
-/BeautifulCorridors/Brian_Gabe/PokemonBattleSystem/PokemonBattleSystem/Debug
-
 
 
 # Created by https://www.gitignore.io/api/visualstudio,unrealengine
@@ -341,3 +336,8 @@ build/
 /BeautifulCorridors/Brian_Gabe/BeautifulCorridor/Binaries
 /BeautifulCorridors/Brian_Gabe/BeautifulCorridor/Saved
 /BeautifulCorridors/Brian_Gabe/BeautifulCorridor/Intermediate
+/BeautifulCorridors/Brian_Gabe/HopefullyWorkingProject/BattleSystem2/*
+/BeautifulCorridors/Brian_Gabe/HopefullyWorkingProject/BattleSystem2/*.db
+/BeautifulCorridors/Brian_Gabe/HopefullyWorkingProject/BattleSystem2/*
+/BeautifulCorridors/Brian_Gabe/HopefullyWorkingProject/BattleSystem2/*.opendb
+/BeautifulCorridors/Brian_Gabe/HopefullyWorkingProject/BattleSystem2/*.db
