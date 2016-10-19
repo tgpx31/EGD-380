@@ -58,7 +58,6 @@ void BattleSystem::player1Turn()
 		
 	std::cout << "\nPress ENTER to continue\n";
 	std::cin.get();
-	std::cin.get();
 
 	if (mpPlayer2->didFaint())
 		mBattleOver = true;
