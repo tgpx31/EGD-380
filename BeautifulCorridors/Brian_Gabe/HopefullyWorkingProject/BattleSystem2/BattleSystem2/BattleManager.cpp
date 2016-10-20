@@ -6,7 +6,7 @@ BattleSystem::BattleSystem(Pokemon* player1, Pokemon* player2)
 {
 	mpPlayer1 = player1;
 	mpPlayer2 = player2;
-	mBattleOver = false;
+	mUpdating = true;
 }
 
 BattleSystem::~BattleSystem()
@@ -30,7 +30,7 @@ bool BattleSystem::update()
 		player1Turn();
 	}
 
-	return mBattleOver;
+	return mUpdating;
 }
 
 void BattleSystem::getInput()
@@ -48,7 +48,7 @@ void BattleSystem::player1Turn()
 {
 	if (mPlayerMove < 0)
 	{
-		mBattleOver = true;
+		mUpdating = false;
 		return;
 	}
 	else if (mPlayerMove >= 0 && mPlayerMove <= 3)
@@ -60,7 +60,7 @@ void BattleSystem::player1Turn()
 	std::cin.get();
 
 	if (mpPlayer2->didFaint())
-		mBattleOver = true;
+		mUpdating = false;
 }
 
 void BattleSystem::player2Turn()
@@ -72,5 +72,5 @@ void BattleSystem::player2Turn()
 	std::cin.get();
 
 	if (mpPlayer1->didFaint())
-		mBattleOver = true;
+		mUpdating = false;
 }

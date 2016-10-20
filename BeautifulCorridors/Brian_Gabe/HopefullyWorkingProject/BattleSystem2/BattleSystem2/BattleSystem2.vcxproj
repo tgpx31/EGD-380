@@ -118,6 +118,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Agility.h" />
     <ClInclude Include="AirCutter.h" />
     <ClInclude Include="BattleManager.h" />
     <ClInclude Include="Bite.h" />

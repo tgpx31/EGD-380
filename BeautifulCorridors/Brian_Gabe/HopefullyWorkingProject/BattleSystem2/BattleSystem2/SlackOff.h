@@ -9,7 +9,12 @@ struct SlackOff : public Move
 	{
 		mName = "Slack Off";
 		mType = Type::normal;
-		mPower = -1;
+
+		mMoveAction = heal;
+		mAffectedStatIndex = 0;
+		mStatMultiplier = 0;
+
+		mPower = 0;
 		mAccuracy = 100;
 		mPP = 10;
 		isSpecial = false;

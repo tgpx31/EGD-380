@@ -9,6 +9,11 @@ struct FireBlast : public Move
 	{
 		mName = "Fire Blast";
 		mType = Type::fire;
+
+		mMoveAction = damage;
+		mAffectedStatIndex = 0;
+		mStatMultiplier = 0;
+
 		mPower = 110;
 		mAccuracy = 85;
 		mPP = 5;

@@ -17,7 +17,7 @@ public:
 	void player2Turn();
 
 private:
-	bool mBattleOver;
+	bool mUpdating;
 	int mPlayerMove;
 
 	Pokemon* mpPlayer1;

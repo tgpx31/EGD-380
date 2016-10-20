@@ -15,7 +15,7 @@ int main()
 
 	BattleSystem testSystem(testBro1, testChar1);
 
-	while (testSystem.update() == false)
+	while (testSystem.update())
 	{
 		//continue battle loop
 	}
