@@ -1,14 +1,17 @@
-#ifndef SLOWBRO_H
-#define SLOWBRO_H
+// Fill out your copyright notice in the Description page of Project Settings.
 
+#pragma once
 
+#include "Pokemon.h"
+/**
+ * 
+ */
+struct Surf;
+struct SlackOff;
+struct Psychic;
+struct IceBeam;
 
-#include "Surf.h"
-#include "SlackOff.h"
-#include "Psychic.h"
-#include "IceBeam.h"
-
-class Slowbro : public Pokemon
+class Slowbro : public APokemon
 {
 public:
 	Slowbro()
@@ -23,16 +26,12 @@ public:
 		mSpDefense = 196;
 		mSpeed = 96;
 
-		mpMoveList[0] = new Surf();
+		/*mpMoveList[0] = new Surf();
 		mpMoveList[1] = new SlackOff();
 		mpMoveList[2] = new Psychic();
 		mpMoveList[3] = new IceBeam();
-
+*/
 		mType[0] = Type::water;
 		mType[1] = Type::psychic;
 	};
-
-private:
 };
-
-#endif

@@ -2,6 +2,7 @@
 
 #include "BeautifulCorridor.h"
 #include "Pokemon.h"
+#include "Move.h"
 
 
 // Sets default values
