@@ -75,8 +75,29 @@
     <ClInclude Include="BattleManager.h">
       <Filter>Header Files\Util</Filter>
     </ClInclude>
+    <ClInclude Include="Snorlax.h">
+      <Filter>Header Files\Pokemon</Filter>
+    </ClInclude>
     <ClInclude Include="Agility.h">
       <Filter>Header Files\Moves</Filter>
+    </ClInclude>
+    <ClInclude Include="BodySlam.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
+    <ClInclude Include="Crunch.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
+    <ClInclude Include="Lick.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
+    <ClInclude Include="DefenseCurl.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
+    <ClInclude Include="Thunderbolt.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
+    <ClInclude Include="Raichu.h">
+      <Filter>Header Files\Pokemon</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

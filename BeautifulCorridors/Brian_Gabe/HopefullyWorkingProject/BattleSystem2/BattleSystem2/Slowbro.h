@@ -1,11 +1,10 @@
 #ifndef SLOWBRO_H
 #define SLOWBRO_H
 
-
+#include "Pokemon.h"
 
 #include "Surf.h"
 #include "SlackOff.h"
-//#include "Psychic.h"
 #include "Agility.h"
 #include "IceBeam.h"
 

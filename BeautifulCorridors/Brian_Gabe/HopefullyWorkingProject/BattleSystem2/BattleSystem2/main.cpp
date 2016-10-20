@@ -1,5 +1,8 @@
 #include "Charizard.h"
 #include "Slowbro.h"
+#include "Raichu.h"
+#include "Snorlax.h"
+
 #include "BattleManager.h"
 
 int main()
@@ -10,10 +13,12 @@ int main()
 	int compInput = 0;
 
 	// Test variables
-	Charizard* testChar1 = new Charizard();
-	Slowbro* testBro1 = new Slowbro();
+	Charizard* poke1= new Charizard();
+	Slowbro* poke2 = new Slowbro();
+	Snorlax* poke3 = new Snorlax();
+	Raichu* poke4 = new Raichu();
 
-	BattleSystem testSystem(testBro1, testChar1);
+	BattleSystem testSystem(poke2, poke4, poke1, poke3);
 
 	while (testSystem.update())
 	{

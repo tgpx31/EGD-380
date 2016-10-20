@@ -148,7 +148,7 @@ float Pokemon::calcResistance(Type moveType, Pokemon * other)
 void Pokemon::displayMoveList()
 {
 	int moveNo = 0;
-	for (auto move : mpMoveList)
+	for (Move* move : mpMoveList)
 	{
 		std::cout << move->mName << "[" << moveNo << "] ";
 		++moveNo;
