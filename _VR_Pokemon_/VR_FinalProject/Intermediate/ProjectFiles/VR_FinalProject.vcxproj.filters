@@ -1,46 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\VR_FinalProject.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{5E3414AC-190F-40C9-A9E9-15C1293474A0}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\VR_FinalProject.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\VR_FinalProjectEditor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{AE780908-6502-42F7-8455-0AA87C7EBE3B}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\VR_FinalProject">
-			<UniqueIdentifier>{55904B46-2AB1-4FCD-A5A4-3A7293A219DB}</UniqueIdentifier>
-		</Filter>
-		<ClCompile Include="..\..\Source\VR_FinalProject\MoveImporter.cpp">
-			<Filter>Source\VR_FinalProject</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\VR_FinalProject\MoveImporter.h">
-			<Filter>Source\VR_FinalProject</Filter>
-		</ClInclude >
-		<None Include="..\..\Source\VR_FinalProject\VR_FinalProject.Build.cs">
-			<Filter>Source\VR_FinalProject</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\VR_FinalProject\VR_FinalProject.cpp">
-			<Filter>Source\VR_FinalProject</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\VR_FinalProject\VR_FinalProject.h">
-			<Filter>Source\VR_FinalProject</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\VR_FinalProject.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{9D66C9FC-0A4F-4EDB-81FA-D782DAC34779}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\VR_FinalProject.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\VR_FinalProjectEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{6791E8E3-900B-4D28-A04E-AE6CCD629A6D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\VR_FinalProject">
+      <UniqueIdentifier>{50A1ABD2-721C-4E9E-A109-A1D2B854A52C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\VR_FinalProject\MoveImporter.cpp">
+      <Filter>Source\VR_FinalProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\VR_FinalProject\MoveImporter.h">
+      <Filter>Source\VR_FinalProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\VR_FinalProject\MyPawn.cpp">
+      <Filter>Source\VR_FinalProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\VR_FinalProject\MyPawn.h">
+      <Filter>Source\VR_FinalProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\VR_FinalProject\Pokemon.cpp">
+      <Filter>Source\VR_FinalProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\VR_FinalProject\Pokemon.h">
+      <Filter>Source\VR_FinalProject</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\VR_FinalProject\VR_FinalProject.Build.cs">
+      <Filter>Source\VR_FinalProject</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\VR_FinalProject\VR_FinalProject.cpp">
+      <Filter>Source\VR_FinalProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\VR_FinalProject\VR_FinalProject.h">
+      <Filter>Source\VR_FinalProject</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\VR_FinalProject\Trainer.h">
+      <Filter>Source\VR_FinalProject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\VR_FinalProject\Move.h">
+      <Filter>Source\VR_FinalProject</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\VR_FinalProject\Trainer.cpp">
+      <Filter>Source\VR_FinalProject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\VR_FinalProject\Move.cpp">
+      <Filter>Source\VR_FinalProject</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
