@@ -1,73 +1,106 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup>
-    <None Include="..\..\VR_FinalProject.uproject" />
-    <Filter Include="Source">
-      <UniqueIdentifier>{9D66C9FC-0A4F-4EDB-81FA-D782DAC34779}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\VR_FinalProject.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <None Include="..\..\Source\VR_FinalProjectEditor.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <Filter Include="Config">
-      <UniqueIdentifier>{6791E8E3-900B-4D28-A04E-AE6CCD629A6D}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Config\DefaultEditor.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultEngine.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultGame.ini">
-      <Filter>Config</Filter>
-    </None>
-    <Filter Include="Source\VR_FinalProject">
-      <UniqueIdentifier>{50A1ABD2-721C-4E9E-A109-A1D2B854A52C}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\VR_FinalProject\MoveImporter.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\MoveImporter.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\VR_FinalProject\MyPawn.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\MyPawn.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\VR_FinalProject\Pokemon.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\Pokemon.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-    <None Include="..\..\Source\VR_FinalProject\VR_FinalProject.Build.cs">
-      <Filter>Source\VR_FinalProject</Filter>
-    </None>
-    <ClCompile Include="..\..\Source\VR_FinalProject\VR_FinalProject.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\VR_FinalProject.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\VR_FinalProject\Trainer.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\VR_FinalProject\Move.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\VR_FinalProject\Trainer.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\VR_FinalProject\Move.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\VR_FinalProject.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{BCCB2B3C-F4BE-4B03-9175-9E1192C10EC7}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\VR_FinalProject.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\VR_FinalProjectEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{4CB19C39-D450-451F-B075-DDCE02311FB8}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Plugins">
+			<UniqueIdentifier>{3CF9B9C1-B2A4-43A2-863D-3956F2A32040}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\Developer">
+			<UniqueIdentifier>{2634DB8C-2EE9-4DD9-B958-74E23BE3AAE2}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\Developer\FileImporterPlugin">
+			<UniqueIdentifier>{27BF4BD9-E686-4026-A713-90C8E2FD5C59}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\Developer\FileImporterPlugin\Source">
+			<UniqueIdentifier>{B0680E62-9861-47B8-AF3B-4E9A311091BC}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin">
+			<UniqueIdentifier>{E1B58E03-B1CA-4FAD-B38F-42C9747F79B2}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\FileImporterPlugin.Build.cs">
+			<Filter>Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin</Filter>
+		</None >
+		<Filter Include="Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private">
+			<UniqueIdentifier>{2F415B9F-78BF-4C96-A319-47E1FBA068EC}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private\FileImporterPlugin.cpp">
+			<Filter>Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private\FileImporterPluginPrivatePCH.h">
+			<Filter>Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private</Filter>
+		</ClInclude >
+		<Filter Include="Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Public">
+			<UniqueIdentifier>{7272CCA1-55EC-4F49-8FED-20D7A320D052}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Public\FileImporterPlugin.h">
+			<Filter>Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Public</Filter>
+		</ClInclude >
+		<None Include="..\..\Plugins\Developer\FileImporterPlugin\FileImporterPlugin.uplugin">
+			<Filter>Plugins\Developer\FileImporterPlugin</Filter>
+		</None >
+		<Filter Include="Plugins\Developer\FileImporterPlugin\Resources">
+			<UniqueIdentifier>{EF4B778F-7264-4375-BEC9-745576B1428C}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Plugins\Developer\FileImporterPlugin\Resources\Icon128.png">
+			<Filter>Plugins\Developer\FileImporterPlugin\Resources</Filter>
+		</None >
+		<Filter Include="Source\VR_FinalProject">
+			<UniqueIdentifier>{B41E72C8-88B5-4765-9561-99D178A29463}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\VR_FinalProject\Move.cpp">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\VR_FinalProject\Move.h">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\VR_FinalProject\MoveImporter.cpp">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\VR_FinalProject\MoveImporter.h">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\VR_FinalProject\Pokemon.cpp">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\VR_FinalProject\Pokemon.h">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\VR_FinalProject\Trainer.cpp">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\VR_FinalProject\Trainer.h">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClInclude >
+		<None Include="..\..\Source\VR_FinalProject\VR_FinalProject.Build.cs">
+			<Filter>Source\VR_FinalProject</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\VR_FinalProject\VR_FinalProject.cpp">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\VR_FinalProject\VR_FinalProject.h">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClInclude >
+	</ItemGroup>
 </Project>
