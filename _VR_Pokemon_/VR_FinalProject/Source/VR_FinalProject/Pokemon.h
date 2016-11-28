@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "../Pokemon_C++/Type.h"
 #include "GameFramework/Pawn.h"
 #include "Pokemon.generated.h"
 
@@ -49,7 +50,9 @@ public:
 	int32 mSpeed;
 
 	//actor components
+	UActorComponent* mpMoveList[4];
 
+	Type mType[2];
 
 	//used for stat buffs
 	float mStatCoefficients[5] = { 1.0f,1.0f,1.0f,1.0f,1.0f };	// Does not include HP

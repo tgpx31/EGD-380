@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "../Pokemon_C++/Type.h"
 #include "Components/ActorComponent.h"
 #include "Move.generated.h"
 
@@ -26,6 +27,7 @@ public:
 	virtual void TickComponent( float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction ) override;
 
 	FText mName;
+	Type mType;
 
 	MoveAction mMoveAction = damage;
 	int32 mAffectedStatIndex = 0;
