@@ -3,6 +3,7 @@
 #pragma once
 
 #include "../Pokemon_C++/Type.h"
+#include "Move.h"
 #include "GameFramework/Pawn.h"
 #include "Pokemon.generated.h"
 
@@ -23,6 +24,10 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
+
+	/* The mesh component */
+	UPROPERTY(Category = Meshes, EditAnywhere, BlueprintReadWrite)
+	class UStaticMeshComponent* PokemonMeshComponent;
 
 	//member variables for battle
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
@@ -50,7 +55,8 @@ public:
 	int32 mSpeed;
 
 	//actor components
-	UActorComponent* mpMoveList[4];
+	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadOnly)
+	TArray<UMove*> mpMoveList;
 
 	Type mType[2];
 
