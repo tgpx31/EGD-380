@@ -1,0 +1,19 @@
+UE4 Importer
+
+VS2015>Debug>Attach Process
+
+
+HandleImportClicked @ SContentBrowser.cpp
+	importAsset @ SpriterImporterFactory.cpp
+		GetModuleChecked
+	ImportAssets @ AssetTools.cpp
+ImportAsset @ SContentBrowser.cpp
+ImportAssets @ AssetTools.cpp
+GenerateFactoryFileExtensions @ ObjectTools.cpp
+GenerateFactoryFileExtensions @
+
+For adding factory: bEditorImport must be set to true
+			class must extend UFactory
+			should not be abstract
+see for reference:
+CSVImportFactory.h
