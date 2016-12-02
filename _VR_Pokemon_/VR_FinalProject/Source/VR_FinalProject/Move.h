@@ -37,8 +37,5 @@ public:
 	int32 mAccuracy;
 	int32 mPP;
 
-	bool isSpecial;
-
-		
-	
+	bool isSpecial;	
 };
