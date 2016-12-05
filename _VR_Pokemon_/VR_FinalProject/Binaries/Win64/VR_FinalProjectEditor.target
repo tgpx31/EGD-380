@@ -2,7 +2,7 @@
 	"TargetName" : "VR_FinalProjectEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "90648bf2-4092-48fd-95fa-4d7bfb3dfa4f",
+	"BuildId" : "be47f886-3ad0-4ced-ade2-4ee59f1d9f29",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -15,39 +15,39 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Plugins/ConfigImport2/Binaries/Win64/UE4Editor-ConfigImport2-1182.dll",
+			"Path" : "$(ProjectDir)/Plugins/ConfigImport2/Binaries/Win64/UE4Editor-ConfigImport2-2690.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/ConfigImport2/Binaries/Win64/UE4Editor-ConfigImport2-1182.pdb",
+			"Path" : "$(ProjectDir)/Plugins/ConfigImport2/Binaries/Win64/UE4Editor-ConfigImport2-2690.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/ConfigImport2/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-ConfigImport2-1182.lib",
+			"Path" : "$(ProjectDir)/Plugins/ConfigImport2/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-ConfigImport2-2690.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/Developer/FileImporterPlugin/Binaries/Win64/UE4Editor-FileImporterPlugin-8937.dll",
+			"Path" : "$(ProjectDir)/Plugins/Developer/FileImporterPlugin/Binaries/Win64/UE4Editor-FileImporterPlugin-445.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/Developer/FileImporterPlugin/Binaries/Win64/UE4Editor-FileImporterPlugin-8937.pdb",
+			"Path" : "$(ProjectDir)/Plugins/Developer/FileImporterPlugin/Binaries/Win64/UE4Editor-FileImporterPlugin-445.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/Developer/FileImporterPlugin/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-FileImporterPlugin-8937.lib",
+			"Path" : "$(ProjectDir)/Plugins/Developer/FileImporterPlugin/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-FileImporterPlugin-445.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-VR_FinalProject-8937.dll",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-VR_FinalProject-445.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-VR_FinalProject-8937.pdb",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-VR_FinalProject-445.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-VR_FinalProject-8937.lib",
+			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-VR_FinalProject-445.lib",
 			"Type" : "ImportLibrary"
 		}
 	],

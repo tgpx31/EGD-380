@@ -45,12 +45,15 @@ void FConfigImport2Module::StartupModule()
 		
 		LevelEditorModule.GetToolBarExtensibilityManager()->AddExtender(ToolbarExtender);
 	}
+
+	UE_LOG(LogTemp, Warning, TEXT("ConfigImporter2 Starting up"));
 }
 
 void FConfigImport2Module::ShutdownModule()
 {
 	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
 	// we call this function before unloading the module.
+	UE_LOG(LogTemp, Warning, TEXT("ConfigImporter2 Shutting down"));
 	FConfigImport2Style::Shutdown();
 
 	FConfigImport2Commands::Unregister();

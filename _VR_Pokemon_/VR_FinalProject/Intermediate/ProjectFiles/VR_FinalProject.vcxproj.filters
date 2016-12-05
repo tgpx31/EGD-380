@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\VR_FinalProject.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{0BA995EF-A717-4AB0-B5D7-B5EA9B7CFA68}</UniqueIdentifier>
+			<UniqueIdentifier>{D06F8CBD-77AE-4B7B-86C5-9788DB9E6D84}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\VR_FinalProject.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{41A1D7C9-73DA-4D44-B04D-7BE9ECF39331}</UniqueIdentifier>
+			<UniqueIdentifier>{4CCE3B6A-BCC4-4F87-A17E-F9E2E554AE1D}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -25,22 +25,22 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Plugins">
-			<UniqueIdentifier>{0E68F712-E39F-4E1D-B253-7FA0BA7A0D29}</UniqueIdentifier>
+			<UniqueIdentifier>{40E48625-5676-4F09-8FAB-25BBCFFCCAD5}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\ConfigImport2">
-			<UniqueIdentifier>{D178B82F-CFC4-46E6-B158-8A5E71003801}</UniqueIdentifier>
+			<UniqueIdentifier>{CF3172C6-6B33-4D39-9CD0-FA8A41A7EEDA}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\ConfigImport2\Source">
-			<UniqueIdentifier>{1B4C5144-7F37-4101-ABFA-3917C0380FD7}</UniqueIdentifier>
+			<UniqueIdentifier>{D92DAD99-97FD-45CC-8AAA-2D68DA0208B7}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\ConfigImport2\Source\ConfigImport2">
-			<UniqueIdentifier>{722F276E-53D3-4A36-8E0A-201A61DAFB9E}</UniqueIdentifier>
+			<UniqueIdentifier>{3AA55389-4386-4603-A515-72FD1C41C71C}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\ConfigImport2\Source\ConfigImport2\ConfigImport2.Build.cs">
 			<Filter>Plugins\ConfigImport2\Source\ConfigImport2</Filter>
 		</None >
 		<Filter Include="Plugins\ConfigImport2\Source\ConfigImport2\Private">
-			<UniqueIdentifier>{FD383467-0551-4BAD-95BB-3DDFE0538923}</UniqueIdentifier>
+			<UniqueIdentifier>{0E890231-888E-4FC7-A770-E5E18A32EE3D}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Plugins\ConfigImport2\Source\ConfigImport2\Private\ConfigImport2.cpp">
 			<Filter>Plugins\ConfigImport2\Source\ConfigImport2\Private</Filter>
@@ -52,7 +52,7 @@
 			<Filter>Plugins\ConfigImport2\Source\ConfigImport2\Private</Filter>
 		</ClCompile >
 		<Filter Include="Plugins\ConfigImport2\Source\ConfigImport2\Public">
-			<UniqueIdentifier>{AFA4F37E-22AF-4F45-BB35-2669963A46A4}</UniqueIdentifier>
+			<UniqueIdentifier>{0B789784-6AB2-438C-ABE1-303E60FF1F67}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\ConfigImport2\Source\ConfigImport2\Public\ConfigImport2.h">
 			<Filter>Plugins\ConfigImport2\Source\ConfigImport2\Public</Filter>
@@ -70,7 +70,7 @@
 			<Filter>Plugins\ConfigImport2</Filter>
 		</None >
 		<Filter Include="Plugins\ConfigImport2\Resources">
-			<UniqueIdentifier>{A5211EB8-E132-4234-9CA2-33C3B8BDAC47}</UniqueIdentifier>
+			<UniqueIdentifier>{FF900476-9B04-4B70-A715-A2D5673B06B9}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\ConfigImport2\Resources\ButtonIcon_40x.png">
 			<Filter>Plugins\ConfigImport2\Resources</Filter>
@@ -79,31 +79,31 @@
 			<Filter>Plugins\ConfigImport2\Resources</Filter>
 		</None >
 		<Filter Include="Plugins\Developer">
-			<UniqueIdentifier>{64015939-8F33-41FD-8D22-E047917DB326}</UniqueIdentifier>
+			<UniqueIdentifier>{FD210D74-D15A-46DA-8192-1AD359A5B05F}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\Developer\FileImporterPlugin">
-			<UniqueIdentifier>{131648DD-E561-4F95-999F-D61F5D58CBB4}</UniqueIdentifier>
+			<UniqueIdentifier>{A070CCB7-4286-48B3-8DA7-FD84EA0A0763}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\Developer\FileImporterPlugin\FileImporterPlugin.uplugin">
 			<Filter>Plugins\Developer\FileImporterPlugin</Filter>
 		</None >
 		<Filter Include="Plugins\Developer\FileImporterPlugin\Resources">
-			<UniqueIdentifier>{A5F32CAD-BED4-4CD0-9BC0-E3C2485F45EE}</UniqueIdentifier>
+			<UniqueIdentifier>{E0E7B1B3-421C-44FB-A35D-BED90F7B3383}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\Developer\FileImporterPlugin\Resources\Icon128.png">
 			<Filter>Plugins\Developer\FileImporterPlugin\Resources</Filter>
 		</None >
 		<Filter Include="Plugins\Developer\FileImporterPlugin\Source">
-			<UniqueIdentifier>{5B3C4224-0ADD-40B2-987D-14CFF0281ECD}</UniqueIdentifier>
+			<UniqueIdentifier>{39A0ECD5-002B-4FF5-9B9F-EDA7B073C5B3}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin">
-			<UniqueIdentifier>{C216F23B-A2C1-42ED-9E32-949EB442C21B}</UniqueIdentifier>
+			<UniqueIdentifier>{72CCA1D1-FCC0-43AE-89D6-60A6847BF99E}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\FileImporterPlugin.Build.cs">
 			<Filter>Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin</Filter>
 		</None >
 		<Filter Include="Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private">
-			<UniqueIdentifier>{26649559-3E98-4B61-9920-8A2E01079CE6}</UniqueIdentifier>
+			<UniqueIdentifier>{960CE9C6-143E-4E91-808D-BC3A859128E4}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private\FileImporterPlugin.cpp">
 			<Filter>Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private</Filter>
@@ -112,13 +112,13 @@
 			<Filter>Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private</Filter>
 		</ClInclude >
 		<Filter Include="Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Public">
-			<UniqueIdentifier>{A3BFCB49-ABCE-4A24-A843-D483226F9AEA}</UniqueIdentifier>
+			<UniqueIdentifier>{E86ADB6C-049F-423B-8053-B3B895F71EE6}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Public\FileImporterPlugin.h">
 			<Filter>Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Public</Filter>
 		</ClInclude >
 		<Filter Include="Source\VR_FinalProject">
-			<UniqueIdentifier>{78B5C9CE-1428-4181-969C-F6C4216C9A25}</UniqueIdentifier>
+			<UniqueIdentifier>{A8A3B642-2792-4BB9-8D68-3CEE9B33C958}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Source\VR_FinalProject\Move.cpp">
 			<Filter>Source\VR_FinalProject</Filter>
