@@ -4,8 +4,8 @@ VS2015>Debug>Attach Process
 
 
 HandleImportClicked @ SContentBrowser.cpp
-	importAsset @ SpriterImporterFactory.cpp
-		GetModuleChecked
+	importAsset @ SContentBrowser.cpp
+		ImportAssets @ AssetTools.cpp
 	ImportAssets @ AssetTools.cpp
 ImportAsset @ SContentBrowser.cpp
 ImportAssets @ AssetTools.cpp
@@ -15,5 +15,13 @@ GenerateFactoryFileExtensions @
 For adding factory: bEditorImport must be set to true
 			class must extend UFactory
 			should not be abstract
+
+Be sure to ass to the DESITINATION PATH in AssetTools
+
 see for reference:
 CSVImportFactory.h
+
+NEED TO:
+Add button to editor
+Select file
+UFUNCTION(Exec) to create blueprint archetype
