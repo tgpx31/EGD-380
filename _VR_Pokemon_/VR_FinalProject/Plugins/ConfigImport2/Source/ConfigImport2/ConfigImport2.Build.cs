@@ -27,6 +27,15 @@ public class ConfigImport2 : ModuleRules
 			new string[]
 			{
 				"Core",
+                "Projects",
+                "InputCore",
+                "UnrealEd",
+                "LevelEditor",
+                "PropertyEditor",
+                "CoreUObject",
+                "Engine",
+                "Slate",
+                "SlateCore",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -35,14 +44,7 @@ public class ConfigImport2 : ModuleRules
 		PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Projects",
-				"InputCore",
-				"UnrealEd",
-				"LevelEditor",
-				"CoreUObject",
-				"Engine",
-				"Slate",
-				"SlateCore",
+				
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

@@ -39,6 +39,8 @@ public class FileImporterPlugin : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+                "PropertyEditor",
+                "LevelEditor"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

@@ -1,8 +1,8 @@
 {
 	"Changelist" : 3142249,
-	"BuildId" : "be47f886-3ad0-4ced-ade2-4ee59f1d9f29",
+	"BuildId" : "8f71d7c5-d99f-4018-88fe-39447a087dfb",
 	"Modules" : 
 	{
-		"FileImporterPlugin" : "UE4Editor-FileImporterPlugin-445.dll"
+		"FileImporterPlugin" : "UE4Editor-FileImporterPlugin-7167.dll"
 	}
 }
