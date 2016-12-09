@@ -3,6 +3,7 @@
 #include "ConfigEditorPluginPrivatePCH.h"
 #include "ConfigEditorPlugin.h"
 #include "MyConfigFactory.h"
+#include "Pokemon.h"
 
 UObject * UMyConfigFactory::FactoryCreateNew(UClass * Class, UObject * InParent, FName Name, EObjectFlags Flags, UObject * Context, FFeedbackContext * Warn)
 {
@@ -17,6 +18,7 @@ UMyConfigFactory::UMyConfigFactory(const FObjectInitializer& ObjectInitializer)
 	bEditorImport = true;
 	bText = true;
 	Formats.Add(TEXT("acfg;Config File for BluePrints"));
-	//ContextClass = 
-	//SupportedClass = UMyObject::StaticClass();
+	
+	TSubclassOf <APokemon> ContextClass;
+	TSubclassOf <APokemon> SupportedClass;
 }
