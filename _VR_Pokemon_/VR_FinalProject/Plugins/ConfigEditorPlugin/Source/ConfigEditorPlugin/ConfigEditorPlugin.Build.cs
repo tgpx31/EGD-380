@@ -42,7 +42,8 @@ public class ConfigEditorPlugin : ModuleRules
 				"InputCore",
 				"UnrealEd",
 				"LevelEditor",
-				// ... add private dependencies that you statically link with here ...	
+				// ... add private dependencies that you statically link with here ...
+                "AssetTools"	
 			}
 			);
 		

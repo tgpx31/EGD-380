@@ -2,7 +2,7 @@
 	"TargetName" : "VR_FinalProjectEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "",
+	"BuildId" : "07996b40-83fc-4d87-a20a-8ce8896147c5",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -15,27 +15,15 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Plugins/ConfigImport2/Binaries/Win64/UE4Editor-ConfigImport2.dll",
+			"Path" : "$(ProjectDir)/Plugins/ConfigEditorPlugin/Binaries/Win64/UE4Editor-ConfigEditorPlugin.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/ConfigImport2/Binaries/Win64/UE4Editor-ConfigImport2.pdb",
+			"Path" : "$(ProjectDir)/Plugins/ConfigEditorPlugin/Binaries/Win64/UE4Editor-ConfigEditorPlugin.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/ConfigImport2/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-ConfigImport2.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/Developer/FileImporterPlugin/Binaries/Win64/UE4Editor-FileImporterPlugin.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/Developer/FileImporterPlugin/Binaries/Win64/UE4Editor-FileImporterPlugin.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/Developer/FileImporterPlugin/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-FileImporterPlugin.lib",
+			"Path" : "$(ProjectDir)/Plugins/ConfigEditorPlugin/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-ConfigEditorPlugin.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -58,11 +46,7 @@
 			"Type" : "UFS"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/ConfigImport2/ConfigImport2.uplugin",
-			"Type" : "UFS"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/Developer/FileImporterPlugin/FileImporterPlugin.uplugin",
+			"Path" : "$(ProjectDir)/Plugins/ConfigEditorPlugin/ConfigEditorPlugin.uplugin",
 			"Type" : "UFS"
 		},
 		{

@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-<<<<<<< HEAD
 	<ItemGroup>
 		<None Include="..\..\VR_FinalProject.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{D585B632-CEB9-41E5-83BD-7BF4AEDE50CC}</UniqueIdentifier>
+			<UniqueIdentifier>{CE58C63F-B353-4F3F-B4E4-A245CF81009A}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\VR_FinalProject.Target.cs">
 			<Filter>Source</Filter>
@@ -14,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{6AA85497-AC21-40BE-A27C-6A3D10BC6563}</UniqueIdentifier>
+			<UniqueIdentifier>{827276E2-3ACD-448C-B9F6-92F7D3648C4F}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -26,22 +25,22 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Plugins">
-			<UniqueIdentifier>{47D3F890-685D-473A-8081-A7E65736D7C7}</UniqueIdentifier>
+			<UniqueIdentifier>{F378C89B-5851-4FE9-9487-7C6C310B8132}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\ConfigEditorPlugin">
-			<UniqueIdentifier>{6B13A588-C9B7-4F03-A67C-71ADAF5B412D}</UniqueIdentifier>
+			<UniqueIdentifier>{46A03BDB-7922-4597-A940-FA15838BFBDD}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\ConfigEditorPlugin\Source">
-			<UniqueIdentifier>{3E229B86-A6D1-404C-9519-20C59462A25E}</UniqueIdentifier>
+			<UniqueIdentifier>{159872AF-5D4C-4325-AD7F-B252868A7AA7}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin">
-			<UniqueIdentifier>{4E575497-6AAE-4B96-ACF0-6F0F5FEEFA5F}</UniqueIdentifier>
+			<UniqueIdentifier>{8AF70EEC-CB5D-46C9-A671-953E3F2F21E9}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\ConfigEditorPlugin.Build.cs">
 			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin</Filter>
 		</None >
 		<Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private">
-			<UniqueIdentifier>{5529D7C1-7F97-467B-AA96-F54B7C612D52}</UniqueIdentifier>
+			<UniqueIdentifier>{68C5DB1A-292A-474B-819B-B8C59D581DC0}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private\ConfigEditorPlugin.cpp">
 			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
@@ -59,7 +58,7 @@
 			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
 		</ClCompile >
 		<Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public">
-			<UniqueIdentifier>{634EEED6-C5F5-45C9-AB74-E4CDE0496672}</UniqueIdentifier>
+			<UniqueIdentifier>{E490C307-0145-4F32-B479-57F2A4B0F5C7}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public\ConfigEditorPlugin.h">
 			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public</Filter>
@@ -77,14 +76,20 @@
 			<Filter>Plugins\ConfigEditorPlugin</Filter>
 		</None >
 		<Filter Include="Plugins\ConfigEditorPlugin\Resources">
-			<UniqueIdentifier>{9495E327-E5EA-46AA-9200-8F40CD477154}</UniqueIdentifier>
+			<UniqueIdentifier>{067F94CF-F252-431D-B70E-1EE8B9BE3421}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\ConfigEditorPlugin\Resources\Icon128.png">
 			<Filter>Plugins\ConfigEditorPlugin\Resources</Filter>
 		</None >
 		<Filter Include="Source\VR_FinalProject">
-			<UniqueIdentifier>{7CB67196-A499-4A7F-8E16-0FED8BA60E2E}</UniqueIdentifier>
+			<UniqueIdentifier>{C476B285-1AE4-49DA-A476-2A4D272252BA}</UniqueIdentifier>
 		</Filter>
+		<ClCompile Include="..\..\Source\VR_FinalProject\BattleManager.cpp">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\VR_FinalProject\BattleManager.h">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClInclude >
 		<ClCompile Include="..\..\Source\VR_FinalProject\Move.cpp">
 			<Filter>Source\VR_FinalProject</Filter>
 		</ClCompile >
@@ -95,6 +100,12 @@
 			<Filter>Source\VR_FinalProject</Filter>
 		</ClCompile >
 		<ClInclude Include="..\..\Source\VR_FinalProject\Pokemon.h">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\VR_FinalProject\PokemonBatlle.cpp">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\VR_FinalProject\PokemonBatlle.h">
 			<Filter>Source\VR_FinalProject</Filter>
 		</ClInclude >
 		<ClCompile Include="..\..\Source\VR_FinalProject\Trainer.cpp">
@@ -114,175 +125,3 @@
 		</ClInclude >
 	</ItemGroup>
 </Project>
-=======
-  <ItemGroup>
-    <None Include="..\..\VR_FinalProject.uproject" />
-    <Filter Include="Source">
-      <UniqueIdentifier>{C2C2FF50-4471-4591-9350-99D121305175}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\VR_FinalProject.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <None Include="..\..\Source\VR_FinalProjectEditor.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <Filter Include="Config">
-      <UniqueIdentifier>{890EE8C5-481F-41F3-B2ED-7F8BF12AEFC7}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Config\DefaultEditor.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultEngine.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultGame.ini">
-      <Filter>Config</Filter>
-    </None>
-    <Filter Include="Plugins">
-      <UniqueIdentifier>{2E43CF2C-BCC7-4221-BA3A-7FD67C7EC3F3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Plugins\ConfigImport2">
-      <UniqueIdentifier>{73592C61-2DC3-4A18-8253-4453E4639B28}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Plugins\ConfigImport2\Source">
-      <UniqueIdentifier>{9AB8BA44-E3EF-4B5F-8958-95DBBA3C49B1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Plugins\ConfigImport2\Source\ConfigImport2">
-      <UniqueIdentifier>{72B2C52F-8BD3-4586-A9F3-0553AEA9DDB3}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\ConfigImport2\Source\ConfigImport2\ConfigImport2.Build.cs">
-      <Filter>Plugins\ConfigImport2\Source\ConfigImport2</Filter>
-    </None>
-    <Filter Include="Plugins\ConfigImport2\Source\ConfigImport2\Private">
-      <UniqueIdentifier>{B059D025-5965-4674-83BD-DA0F4EC7F76C}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Plugins\ConfigImport2\Source\ConfigImport2\Private\ConfigImport2.cpp">
-      <Filter>Plugins\ConfigImport2\Source\ConfigImport2\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\ConfigImport2\Source\ConfigImport2\Private\ConfigImport2PrivatePCH.h">
-      <Filter>Plugins\ConfigImport2\Source\ConfigImport2\Private</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\ConfigImport2\Source\ConfigImport2\Private\ConfigImport2Style.cpp">
-      <Filter>Plugins\ConfigImport2\Source\ConfigImport2\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Plugins\ConfigImport2\Source\ConfigImport2\Private\MyToolCustomization.cpp">
-      <Filter>Plugins\ConfigImport2\Source\ConfigImport2\Private</Filter>
-    </ClCompile>
-    <Filter Include="Plugins\ConfigImport2\Source\ConfigImport2\Public">
-      <UniqueIdentifier>{453734FA-2E78-440E-A0DD-32C700482DEB}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Plugins\ConfigImport2\Source\ConfigImport2\Public\ConfigImport2.h">
-      <Filter>Plugins\ConfigImport2\Source\ConfigImport2\Public</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\ConfigImport2\Source\ConfigImport2\Public\ConfigImport2Commands.cpp">
-      <Filter>Plugins\ConfigImport2\Source\ConfigImport2\Public</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\ConfigImport2\Source\ConfigImport2\Public\ConfigImport2Commands.h">
-      <Filter>Plugins\ConfigImport2\Source\ConfigImport2\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Plugins\ConfigImport2\Source\ConfigImport2\Public\ConfigImport2Style.h">
-      <Filter>Plugins\ConfigImport2\Source\ConfigImport2\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Plugins\ConfigImport2\Source\ConfigImport2\Public\MyToolCustomization.h">
-      <Filter>Plugins\ConfigImport2\Source\ConfigImport2\Public</Filter>
-    </ClInclude>
-    <None Include="..\..\Plugins\ConfigImport2\ConfigImport2.uplugin">
-      <Filter>Plugins\ConfigImport2</Filter>
-    </None>
-    <Filter Include="Plugins\ConfigImport2\Resources">
-      <UniqueIdentifier>{35275A7A-AC9E-4CDC-8E6F-026A708C9FF6}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\ConfigImport2\Resources\ButtonIcon_40x.png">
-      <Filter>Plugins\ConfigImport2\Resources</Filter>
-    </None>
-    <None Include="..\..\Plugins\ConfigImport2\Resources\Icon128.png">
-      <Filter>Plugins\ConfigImport2\Resources</Filter>
-    </None>
-    <Filter Include="Plugins\Developer">
-      <UniqueIdentifier>{CACAC718-3963-4510-88D4-80DF45B58BEC}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Plugins\Developer\FileImporterPlugin">
-      <UniqueIdentifier>{B4140880-C498-440E-84F2-87345E8ECCBE}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\Developer\FileImporterPlugin\FileImporterPlugin.uplugin">
-      <Filter>Plugins\Developer\FileImporterPlugin</Filter>
-    </None>
-    <Filter Include="Plugins\Developer\FileImporterPlugin\Resources">
-      <UniqueIdentifier>{5C21B0A7-8C68-469F-89BA-C9467371D1D9}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\Developer\FileImporterPlugin\Resources\Icon128.png">
-      <Filter>Plugins\Developer\FileImporterPlugin\Resources</Filter>
-    </None>
-    <Filter Include="Plugins\Developer\FileImporterPlugin\Source">
-      <UniqueIdentifier>{563E19B0-0F33-4D83-96D8-7C7BEEA4BE77}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin">
-      <UniqueIdentifier>{2F6C34DC-B61F-425A-B1EC-3C51CB3A49E9}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\FileImporterPlugin.Build.cs">
-      <Filter>Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin</Filter>
-    </None>
-    <Filter Include="Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private">
-      <UniqueIdentifier>{A1F195C1-5CCB-4FDF-83F6-F244F7860434}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private\FileImporterPlugin.cpp">
-      <Filter>Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private\FileImporterPluginPrivatePCH.h">
-      <Filter>Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Private</Filter>
-    </ClInclude>
-    <Filter Include="Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Public">
-      <UniqueIdentifier>{122D630D-D637-4108-87C3-D0F3989905CD}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Public\FileImporterPlugin.h">
-      <Filter>Plugins\Developer\FileImporterPlugin\Source\FileImporterPlugin\Public</Filter>
-    </ClInclude>
-    <Filter Include="Source\VR_FinalProject">
-      <UniqueIdentifier>{1D4317D5-0267-4D49-8626-9BB204BF6491}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\VR_FinalProject\Move.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\Move.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\VR_FinalProject\Pokemon.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\Pokemon.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\VR_FinalProject\Trainer.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\Trainer.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-    <None Include="..\..\Source\VR_FinalProject\VR_FinalProject.Build.cs">
-      <Filter>Source\VR_FinalProject</Filter>
-    </None>
-    <ClCompile Include="..\..\Source\VR_FinalProject\VR_FinalProject.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\VR_FinalProject.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\VR_FinalProject\PokemonBatlle.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\VR_FinalProject\BattleManager.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\VR_FinalProject\PokemonBatlle.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\VR_FinalProject\BattleManager.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-  </ItemGroup>
-</Project>
->>>>>>> fa62fda62d9688f807248a1cd821c3db86945241

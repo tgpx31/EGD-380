@@ -3,6 +3,7 @@
 #include "ConfigEditorPluginPrivatePCH.h"
 #include "ConfigEditorPluginEdMode.h"
 #include "ConfigEditorPluginEdModeToolkit.h"
+#include "Developer/AssetTools/Public/AssetToolsModule.h"
 
 #define LOCTEXT_NAMESPACE "FConfigEditorPluginEdModeToolkit"
 
@@ -16,46 +17,53 @@ void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& Init
 	{
 		static bool IsWidgetEnabled()
 		{
-			return GEditor->GetSelectedActors()->Num() != 0;
+			return true; // GEditor->GetSelectedActors()->Num() != 0;
 		}
 
 		static FReply OnButtonClick(FVector InOffset)
 		{
+			IAssetTools& A_T = FModuleManager::Get().LoadModuleChecked<FAssetToolsModule>("AssetTools").Get();
+			A_T.ImportAssets("...");
+			//TArray<UObject*> ReturnObjects;
+			//FString FileTypes, AllExtensions;
+			//TArray<UFactory*> Factories;
 
-			for (TObjectIterator<UClass> It; It; ++It)
-			{
-				UClass* CurrentClass = (*It);
+			//// Get the list of valid factories
+			//for (TObjectIterator<UClass> It; It; ++It)
+			//{
+			//	UClass* CurrentClass = (*It);
 
-				if (CurrentClass->IsChildOf(UFactory::StaticClass()))
-				{
-					if (CurrentClass->GetName() == TEXT("MyConfigFactory"))
-					{
-						
-						return FReply::Handled();
-					}
-				}
-			}
+			//	if (CurrentClass->IsChildOf(UFactory::StaticClass()) && !(CurrentClass->HasAnyClassFlags(CLASS_Abstract)))
+			//	{
+			//		UFactory* Factory = Cast<UFactory>(CurrentClass->GetDefaultObject());
+			//		if (Factory->bEditorImport)
+			//		{
+			//			Factories.Add(Factory);
+			//		}
+			//	}
+			//}
 
-			USelection* SelectedActors = GEditor->GetSelectedActors();
+			//USelection* SelectedActors = GEditor->GetSelectedActors();
 
-			// Let editor know that we're about to do something that we want to undo/redo
-			GEditor->BeginTransaction(LOCTEXT("MoveActorsTransactionName", "MoveActors"));
+			//// Let editor know that we're about to do something that we want to undo/redo
+			//GEditor->BeginTransaction(LOCTEXT("MoveActorsTransactionName", "MoveActors"));
 
-			// For each selected actor
-			for (FSelectionIterator Iter(*SelectedActors); Iter; ++Iter)
-			{
-				if (AActor* LevelActor = Cast<AActor>(*Iter))
-				{
-					// Register actor in opened transaction (undo/redo)
-					LevelActor->Modify();
-					// Move actor to given location
-					LevelActor->TeleportTo(LevelActor->GetActorLocation() + InOffset, FRotator(0, 0, 0));
-				}
-			}
+			//// For each selected actor
+			//for (FSelectionIterator Iter(*SelectedActors); Iter; ++Iter)
+			//{
+			//	if (AActor* LevelActor = Cast<AActor>(*Iter))
+			//	{
+			//		// Register actor in opened transaction (undo/redo)
+			//		LevelActor->Modify();
+			//		// Move actor to given location
+			//		LevelActor->TeleportTo(LevelActor->GetActorLocation() + InOffset, FRotator(0, 0, 0));
+			//	}
+			//}
 
-			// We're done moving actors so close transaction
-			GEditor->EndTransaction();
+			//// We're done moving actors so close transaction
+			//GEditor->EndTransaction();
 
+			//return FReply::Handled();
 			return FReply::Handled();
 		}
 
@@ -82,37 +90,14 @@ void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& Init
 			[
 				SNew(STextBlock)
 				.AutoWrapText(true)
-				.Text(LOCTEXT("HelperLabel", "Press the button to select a config file"))
+				.Text(LOCTEXT("HelperLabel", "Press the button to select a config file to import"))
 			]
 			+ SVerticalBox::Slot()
 				.HAlign(HAlign_Center)
 				.AutoHeight()
 				[
-					Locals::MakeButton(LOCTEXT("UpButtonLabel", "Press this shit"), FVector(0, 0, Factor))
+					Locals::MakeButton(LOCTEXT("UpButtonLabel", "Browse"), FVector(0, 0, Factor))
 				]
-			/*+ SVerticalBox::Slot()
-				.HAlign(HAlign_Center)
-				.AutoHeight()
-				[
-					SNew(SHorizontalBox)
-					+ SHorizontalBox::Slot()
-					.AutoWidth()
-					[
-						Locals::MakeButton(LOCTEXT("LeftButtonLabel", "Left"), FVector(0, -Factor, 0))
-					]
-					+ SHorizontalBox::Slot()
-						.AutoWidth()
-						[
-							Locals::MakeButton(LOCTEXT("RightButtonLabel", "Right"), FVector(0, Factor, 0))
-						]
-				]
-			+ SVerticalBox::Slot()
-				.HAlign(HAlign_Center)
-				.AutoHeight()
-				[
-					Locals::MakeButton(LOCTEXT("DownButtonLabel", "Down"), FVector(0, 0, -Factor))
-				]*/
-
 		];
 		
 	FModeToolkit::Init(InitToolkitHost);
