@@ -17,6 +17,14 @@
 		{
 			"Name": "BlankPlugin",
 			"Enabled": false
+		},
+		{
+			"Name": "ConfigImport2",
+			"Enabled": false
+		},
+		{
+			"Name": "FileImporterPlugin",
+			"Enabled": false
 		}
 	]
 }
