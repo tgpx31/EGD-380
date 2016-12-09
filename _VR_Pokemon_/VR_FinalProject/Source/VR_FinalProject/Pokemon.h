@@ -23,7 +23,17 @@ public:
 	virtual void Tick( float DeltaSeconds ) override;
 
 	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
+	//virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
+
+	inline void modifyHealth(int32 change) { mCurrentHealth -= change; };
+	inline void modifyStatCoefficient(int index, float multiplier) { mStatCoefficients[index] *= multiplier; };
+	inline bool didFaint() { return mCurrentHealth <= 0; };
+	 
+	void useMove(int index, APokemon* target);
+	void doDamage(UMove* move, APokemon* Other);
+	float calcResistance(Type moveType, APokemon* other);
+
+	//void displayMoveList();
 
 	/* The mesh component */
 	UPROPERTY(Category = Meshes, EditAnywhere, BlueprintReadWrite)
@@ -67,6 +77,7 @@ public:
 	const static int LEVEL = 100;
 	const static int MIN_ACCURACY = 0;
 	const static int MIN_RAND_NUM = 85;
-	const static int MAX_RAND_NUM = 100;
-		
+	const static int MAX_RAND_NUM = 100;		
 };
+
+int randomNumber(int min, int max);
