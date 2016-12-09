@@ -8,3 +8,15 @@ UObject * UMyConfigFactory::FactoryCreateNew(UClass * Class, UObject * InParent,
 {
 	return nullptr;
 }
+
+UMyConfigFactory::UMyConfigFactory(const FObjectInitializer& ObjectInitializer)
+	: Super(ObjectInitializer)
+{
+	bCreateNew = true;
+	bEditAfterNew = true;
+	bEditorImport = true;
+	bText = true;
+	Formats.Add(TEXT("acfg;Config File for BluePrints"));
+	//ContextClass = 
+	//SupportedClass = UMyObject::StaticClass();
+}

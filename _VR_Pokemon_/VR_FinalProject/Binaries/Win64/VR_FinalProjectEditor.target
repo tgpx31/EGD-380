@@ -2,7 +2,7 @@
 	"TargetName" : "VR_FinalProjectEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "07996b40-83fc-4d87-a20a-8ce8896147c5",
+	"BuildId" : "3c5bda02-88ba-4270-99f6-bf9fd6b0061a",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -15,27 +15,27 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Plugins/ConfigEditorPlugin/Binaries/Win64/UE4Editor-ConfigEditorPlugin.dll",
+			"Path" : "$(ProjectDir)/Plugins/ConfigEditorPlugin/Binaries/Win64/UE4Editor-ConfigEditorPlugin-5255.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/ConfigEditorPlugin/Binaries/Win64/UE4Editor-ConfigEditorPlugin.pdb",
+			"Path" : "$(ProjectDir)/Plugins/ConfigEditorPlugin/Binaries/Win64/UE4Editor-ConfigEditorPlugin-5255.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/ConfigEditorPlugin/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-ConfigEditorPlugin.lib",
+			"Path" : "$(ProjectDir)/Plugins/ConfigEditorPlugin/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-ConfigEditorPlugin-5255.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-VR_FinalProject.dll",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-VR_FinalProject-5255.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-VR_FinalProject.pdb",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-VR_FinalProject-5255.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-VR_FinalProject.lib",
+			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-VR_FinalProject-5255.lib",
 			"Type" : "ImportLibrary"
 		}
 	],
