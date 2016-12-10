@@ -4,6 +4,8 @@
 #include "ConfigEditorPluginEdMode.h"
 #include "ConfigEditorPluginEdModeToolkit.h"
 #include "Developer/AssetTools/Public/AssetToolsModule.h"
+#include "VR_FinalProject/Pokemon.h"
+#include "CoreMisc.h"
 
 #define LOCTEXT_NAMESPACE "FConfigEditorPluginEdModeToolkit"
 
@@ -23,8 +25,13 @@ void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& Init
 		static FReply OnButtonClick(FVector InOffset)
 		{
 			// Grab the Asset
-			IAssetTools& A_T = FModuleManager::Get().LoadModuleChecked<FAssetToolsModule>("AssetTools").Get();
-			A_T.ImportAssets("...");
+			/*IAssetTools& A_T = FModuleManager::Get().LoadModuleChecked<FAssetToolsModule>("AssetTools").Get();
+			A_T.ImportAssets("...");*/
+
+			// enter a name corresponding to the data file
+			// load data from the file into values in an instantiated Pokemon
+
+			
 			
 			return FReply::Handled();
 		}

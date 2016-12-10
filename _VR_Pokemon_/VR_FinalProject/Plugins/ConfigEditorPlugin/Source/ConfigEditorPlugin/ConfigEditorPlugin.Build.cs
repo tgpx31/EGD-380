@@ -17,7 +17,7 @@ public class ConfigEditorPlugin : ModuleRules
 		
 		PrivateIncludePaths.AddRange(
 			new string[] {
-				"ConfigEditorPlugin/Private",
+				"ConfigEditorPlugin/Private"
 				// ... add other private include paths required here ...
 			}
 			);
@@ -43,7 +43,8 @@ public class ConfigEditorPlugin : ModuleRules
 				"UnrealEd",
 				"LevelEditor",
 				// ... add private dependencies that you statically link with here ...
-                "AssetTools"	
+                "AssetTools",
+                "VR_FinalProject"
 			}
 			);
 		
