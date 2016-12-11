@@ -7,6 +7,8 @@
 #include "GameFramework/Pawn.h"
 #include "Pokemon.generated.h"
 
+const int MOVE_AMOUNT = 4;
+
 UCLASS()
 class VR_FINALPROJECT_API APokemon : public APawn
 {
@@ -33,7 +35,7 @@ public:
 	void doDamage(UMove* move, APokemon* Other);
 	float calcResistance(Type moveType, APokemon* other);
 
-	//void displayMoveList();
+	void displayMoveList();
 
 	/* The mesh component */
 	UPROPERTY(Category = Meshes, EditAnywhere, BlueprintReadWrite)

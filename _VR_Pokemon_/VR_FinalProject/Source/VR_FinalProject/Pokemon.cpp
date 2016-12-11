@@ -25,8 +25,6 @@ void APokemon::BeginPlay()
 void APokemon::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
-
-	GLog->Log("test");
 }
 
 //// Called to bind functionality to input
@@ -158,6 +156,14 @@ float APokemon::calcResistance(Type moveType, APokemon* other)
 		finalMult *= TypeChart[moveType][other->mType[1]];
 
 	return finalMult;
+}
+
+void APokemon::displayMoveList()
+{
+	for (int i = 0; i < MOVE_AMOUNT; ++i)
+	{
+		GLog->Log(mpMoveList[i]->mName.ToString() + FString("[") + FString::FromInt(i) + FString("]"));
+	}
 }
 
 int randomNumber(int min, int max)

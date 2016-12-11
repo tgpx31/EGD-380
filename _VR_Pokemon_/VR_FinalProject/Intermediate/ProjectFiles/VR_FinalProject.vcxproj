@@ -84,7 +84,7 @@
 		</ProjectConfiguration>
 	</ItemGroup>
 	<PropertyGroup Label="Globals">
-		<ProjectGuid>{A7903C87-6330-4EEA-941D-948DED01C9A8}</ProjectGuid>
+		<ProjectGuid>{B5B92849-34CF-4405-8C2C-61B8C70B144A}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
 		<RootNamespace>VR_FinalProject</RootNamespace>
        <PlatformToolset>v140</PlatformToolset>

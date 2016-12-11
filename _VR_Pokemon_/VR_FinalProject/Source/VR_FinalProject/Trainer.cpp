@@ -16,14 +16,13 @@ ATrainer::ATrainer()
 void ATrainer::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
 void ATrainer::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
-
+	getInput();
 }
 
 // Called to bind functionality to input
@@ -33,3 +32,13 @@ void ATrainer::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 
 }
 
+void ATrainer::getInput()
+{
+	GLog->Log("What will you do?\nFight[0] Switch[1]\n");
+	//get input here
+}
+
+void ATrainer::attack()
+{
+
+}
