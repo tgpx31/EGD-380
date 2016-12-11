@@ -84,7 +84,7 @@
 		</ProjectConfiguration>
 	</ItemGroup>
 	<PropertyGroup Label="Globals">
-		<ProjectGuid>{ADAE2467-6672-427A-866A-8E463F02C6F4}</ProjectGuid>
+		<ProjectGuid>{A7903C87-6330-4EEA-941D-948DED01C9A8}</ProjectGuid>
 		<Keyword>MakeFileProj</Keyword>
 		<RootNamespace>VR_FinalProject</RootNamespace>
        <PlatformToolset>v140</PlatformToolset>
@@ -431,8 +431,6 @@
 		<ClInclude Include="..\..\Source\VR_FinalProject\Move.h" />
 		<ClCompile Include="..\..\Source\VR_FinalProject\Pokemon.cpp" />
 		<ClInclude Include="..\..\Source\VR_FinalProject\Pokemon.h" />
-		<ClCompile Include="..\..\Source\VR_FinalProject\PokemonBatlle.cpp" />
-		<ClInclude Include="..\..\Source\VR_FinalProject\PokemonBatlle.h" />
 		<ClCompile Include="..\..\Source\VR_FinalProject\Trainer.cpp" />
 		<ClInclude Include="..\..\Source\VR_FinalProject\Trainer.h" />
 		<None Include="..\..\Source\VR_FinalProject\VR_FinalProject.Build.cs" />

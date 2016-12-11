@@ -20,6 +20,4 @@ public:
 	BattleManager();
 	~BattleManager();
 
-private:
-
 };

@@ -26,6 +26,7 @@ void APokemon::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
 
+	GLog->Log("test");
 }
 
 //// Called to bind functionality to input

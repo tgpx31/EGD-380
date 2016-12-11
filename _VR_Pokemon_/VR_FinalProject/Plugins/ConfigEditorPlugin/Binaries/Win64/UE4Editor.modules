@@ -1,6 +1,6 @@
 {
 	"Changelist" : 3142249,
-	"BuildId" : "db3d9396-89af-4d86-9d84-f8d03b812369",
+	"BuildId" : "",
 	"Modules" : 
 	{
 		"ConfigEditorPlugin" : "UE4Editor-ConfigEditorPlugin.dll"

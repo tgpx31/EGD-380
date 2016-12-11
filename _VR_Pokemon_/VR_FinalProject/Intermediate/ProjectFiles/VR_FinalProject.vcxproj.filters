@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\VR_FinalProject.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{3B02E8EF-F063-4FC1-A86B-BC9E76FEC664}</UniqueIdentifier>
+			<UniqueIdentifier>{8491EC72-CEF9-41EC-9360-A30754E9C5CB}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\VR_FinalProject.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{04EA7E65-9B13-4F68-9E42-C254AD2A48E4}</UniqueIdentifier>
+			<UniqueIdentifier>{3F4835FE-06FF-4076-969B-0236A14F4E3C}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -25,22 +25,22 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Plugins">
-			<UniqueIdentifier>{F4E1DDFE-9692-4BBE-9655-C45081A7D4EB}</UniqueIdentifier>
+			<UniqueIdentifier>{7B860BBF-2EAD-48B4-8214-01D426785985}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\ConfigEditorPlugin">
-			<UniqueIdentifier>{AFA015CD-5227-4840-98F5-DA9FB1224ABD}</UniqueIdentifier>
+			<UniqueIdentifier>{33B530C7-2BB3-4747-B1A5-2BDF870C114D}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\ConfigEditorPlugin\Source">
-			<UniqueIdentifier>{22731150-B4DC-4A74-BE68-C824ABBF531C}</UniqueIdentifier>
+			<UniqueIdentifier>{ACFB4857-04CA-486E-8843-92BF5E9EB909}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin">
-			<UniqueIdentifier>{57FA6740-9B42-4276-9EB6-DE231469236C}</UniqueIdentifier>
+			<UniqueIdentifier>{8E0D40ED-3A28-419B-A9F0-E36E448D49EA}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\ConfigEditorPlugin.Build.cs">
 			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin</Filter>
 		</None >
 		<Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private">
-			<UniqueIdentifier>{60432DF6-75AB-4DCE-BD77-70F1757A1234}</UniqueIdentifier>
+			<UniqueIdentifier>{AF5F135C-6863-4DA4-AA48-497E46C16A15}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private\ConfigEditorPlugin.cpp">
 			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
@@ -58,7 +58,7 @@
 			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
 		</ClCompile >
 		<Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public">
-			<UniqueIdentifier>{E74ABAC2-D5A6-45D7-9E38-3F6F0A889A03}</UniqueIdentifier>
+			<UniqueIdentifier>{5410D4E2-9DA6-42BC-B926-9B054A2E4F54}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public\ConfigEditorPlugin.h">
 			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public</Filter>
@@ -76,13 +76,13 @@
 			<Filter>Plugins\ConfigEditorPlugin</Filter>
 		</None >
 		<Filter Include="Plugins\ConfigEditorPlugin\Resources">
-			<UniqueIdentifier>{95A6AF63-52F0-4E8A-BB67-0199E4906855}</UniqueIdentifier>
+			<UniqueIdentifier>{33677B20-76A2-4571-9023-58EC4B61260D}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\ConfigEditorPlugin\Resources\Icon128.png">
 			<Filter>Plugins\ConfigEditorPlugin\Resources</Filter>
 		</None >
 		<Filter Include="Source\VR_FinalProject">
-			<UniqueIdentifier>{F4D5B3BE-C705-4548-95E3-89BF28B86B45}</UniqueIdentifier>
+			<UniqueIdentifier>{B6385A2F-8FA5-416F-BF41-2C8793E0103E}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Source\VR_FinalProject\BattleManager.cpp">
 			<Filter>Source\VR_FinalProject</Filter>
@@ -100,12 +100,6 @@
 			<Filter>Source\VR_FinalProject</Filter>
 		</ClCompile >
 		<ClInclude Include="..\..\Source\VR_FinalProject\Pokemon.h">
-			<Filter>Source\VR_FinalProject</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\VR_FinalProject\PokemonBatlle.cpp">
-			<Filter>Source\VR_FinalProject</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\VR_FinalProject\PokemonBatlle.h">
 			<Filter>Source\VR_FinalProject</Filter>
 		</ClInclude >
 		<ClCompile Include="..\..\Source\VR_FinalProject\Trainer.cpp">
