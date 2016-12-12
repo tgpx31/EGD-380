@@ -25,10 +25,24 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
+	void optionPressed(int optionNum);
+
+	template<int option>
+	void optionPressed() { optionPressed(option); };
+
 	void getInput();
-	void attack();
+	void attack(APokemon* enemy);
 	void switchPokemon(int index);
+	void promptSwitch();
+	void displayRoster();
 	bool rosterDead();
+
+	int mCurrentInput;
+	int mCurrentPokemon;
+	bool mInputOpen;
+
+	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadOnly)
+	bool mIsPlayer;
 
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadOnly)
 	TArray<APokemon*> mPokemonList;

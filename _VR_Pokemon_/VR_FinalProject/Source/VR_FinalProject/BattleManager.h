@@ -5,14 +5,7 @@
  */
 
 #include "Pokemon.h"
-
-enum BattleState
-{
-	player1Switch,
-	player1Attack,
-	player2Switch,
-	player2Attack
-};
+ 
 
 class VR_FINALPROJECT_API BattleManager
 {
