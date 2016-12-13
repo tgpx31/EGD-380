@@ -9,6 +9,11 @@ struct AirCutter : public Move
 	{
 		mName = "Air Cutter";
 		mType = Type::flying;
+
+		mMoveAction = damage;
+		mAffectedStatIndex = 0;
+		mStatMultiplier = 0;
+
 		mPower = 60;
 		mAccuracy = 95;
 		mPP = 25;

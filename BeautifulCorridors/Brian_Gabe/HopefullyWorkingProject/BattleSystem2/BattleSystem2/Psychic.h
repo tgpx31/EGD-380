@@ -9,6 +9,11 @@ struct Psychic : public Move
 	{
 		mName = "Psychic";
 		mType = Type::psychic;
+
+		mMoveAction = damage;
+		mAffectedStatIndex = 0;
+		mStatMultiplier = 0;
+
 		mPower = 90;
 		mAccuracy = 100;
 		mPP = 10;

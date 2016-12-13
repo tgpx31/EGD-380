@@ -6,6 +6,27 @@ Pokemon::~Pokemon()
 		delete i;
 }
 
+std::string Pokemon::getStat(int id)
+{
+	std::string stat;
+	switch (id)
+	{
+	case 0: stat = "Attack";
+		break;
+	case 1: stat = "Defense";
+		break;
+	case 2: stat = "Special Attack";
+		break;
+	case 3: stat = "Special Defense";
+		break;
+	case 4: stat = "Speed";
+		break;
+	default: break;
+	}
+
+	return stat;
+}
+
 void Pokemon::useMove(int index, Pokemon* target)
 {
 	// Can they actually use the move?
@@ -35,7 +56,8 @@ void Pokemon::doDamage(Move* move, Pokemon* Other)
 	float weakness = 1;
 	float STAB_MULT = 1;
 
-	if (move->mPower < 0)
+	// Check if Heal || Stat boost || Damage
+	if (move->mMoveAction == heal)
 	{
 		// These moves heal you
 		modifyHealth(-static_cast<int>(getMaxHealth() / 2));
@@ -45,6 +67,25 @@ void Pokemon::doDamage(Move* move, Pokemon* Other)
 			modifyHealth(getHealth() - getMaxHealth());
 		}
 		std::cout << mName << " healed for " << static_cast<int>(getMaxHealth() / 2) << " HP!\n\n";
+		return;
+	}
+	else if (move->mMoveAction == stat_change)
+	{
+		// Raise the corresponding stat
+		modifyStatCoefficient(move->mAffectedStatIndex, move->mStatMultiplier);
+
+		if (mStatCoefficients[move->mAffectedStatIndex] >= 4.0f)
+		{
+			mStatCoefficients[move->mAffectedStatIndex] = 4.0f;
+		}
+		else if (mStatCoefficients[move->mAffectedStatIndex] <= .25f)
+		{
+			mStatCoefficients[move->mAffectedStatIndex] = .25f;
+		}
+
+		if (move->mStatMultiplier > 1)
+			std::cout << mName << " raised their " << getStat(move->mAffectedStatIndex) << " !\n\n";
+
 		return;
 	}
 
@@ -107,7 +148,7 @@ float Pokemon::calcResistance(Type moveType, Pokemon * other)
 void Pokemon::displayMoveList()
 {
 	int moveNo = 0;
-	for (auto move : mpMoveList)
+	for (Move* move : mpMoveList)
 	{
 		std::cout << move->mName << "[" << moveNo << "] ";
 		++moveNo;

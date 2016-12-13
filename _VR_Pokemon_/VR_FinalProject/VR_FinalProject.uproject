@@ -1,0 +1,30 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "4.13",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "VR_FinalProject",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "BlankPlugin",
+			"Enabled": false
+		},
+		{
+			"Name": "ConfigImport2",
+			"Enabled": false
+		},
+		{
+			"Name": "FileImporterPlugin",
+			"Enabled": false
+		}
+	]
+}

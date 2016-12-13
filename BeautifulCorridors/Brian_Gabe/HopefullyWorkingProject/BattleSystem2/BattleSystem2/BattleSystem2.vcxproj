@@ -118,19 +118,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Agility.h" />
     <ClInclude Include="AirCutter.h" />
     <ClInclude Include="BattleManager.h" />
     <ClInclude Include="Bite.h" />
+    <ClInclude Include="BodySlam.h" />
     <ClInclude Include="Charizard.h" />
+    <ClInclude Include="Crunch.h" />
+    <ClInclude Include="DefenseCurl.h" />
     <ClInclude Include="FireBlast.h" />
     <ClInclude Include="IceBeam.h" />
+    <ClInclude Include="Lick.h" />
     <ClInclude Include="Move.h" />
     <ClInclude Include="Pokemon.h" />
     <ClInclude Include="Psychic.h" />
+    <ClInclude Include="Raichu.h" />
     <ClInclude Include="SlackOff.h" />
     <ClInclude Include="Slash.h" />
     <ClInclude Include="Slowbro.h" />
+    <ClInclude Include="Snorlax.h" />
     <ClInclude Include="Surf.h" />
+    <ClInclude Include="Thunderbolt.h" />
     <ClInclude Include="Type.h" />
   </ItemGroup>
   <ItemGroup>

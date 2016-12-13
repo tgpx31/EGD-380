@@ -1,11 +1,11 @@
 #ifndef SLOWBRO_H
 #define SLOWBRO_H
 
-
+#include "Pokemon.h"
 
 #include "Surf.h"
 #include "SlackOff.h"
-#include "Psychic.h"
+#include "Agility.h"
 #include "IceBeam.h"
 
 class Slowbro : public Pokemon
@@ -25,7 +25,7 @@ public:
 
 		mpMoveList[0] = new Surf();
 		mpMoveList[1] = new SlackOff();
-		mpMoveList[2] = new Psychic();
+		mpMoveList[2] = new Agility();
 		mpMoveList[3] = new IceBeam();
 
 		mType[0] = Type::water;
