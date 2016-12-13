@@ -11,42 +11,42 @@
 
 FConfigEditorPluginEdModeToolkit::FConfigEditorPluginEdModeToolkit()
 {
-	Items.Add(MakeShareable(new FString("Slowbro")));
-	Items.Add(MakeShareable(new FString("Charizard")));
+	Items.Empty();
 }
 
 void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& InitToolkitHost)
 {
+	Items.Add(MakeShareable(new FString("Slowbro")));
+	Items.Add(MakeShareable(new FString("Charizard")));
+
 	struct Locals
 	{
 		static bool IsWidgetEnabled()
 		{
-			return true; // GEditor->GetSelectedActors()->Num() != 0;
+			return true;
 		}
 
-		static FReply OnButtonClick(FVector InOffset)
+		static FReply OnButtonClick(TSharedPtr< SListView< TSharedPtr<FString> > > list)
 		{
-			//// Grab the Asset
-			//IAssetTools& A_T = FModuleManager::Get().LoadModuleChecked<FAssetToolsModule>("AssetTools").Get();
-			//A_T.ImportAssets("...");
-			//
+			FActorSpawnParameters SpawnParam;
+			APokemon* newPokemon = GWorld->SpawnActor<APokemon>(APokemon::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator, SpawnParam);
 
-			// If there is nothing that nis selected in the list, don't do anything, maybe display a warning to the user
-			// If there is a pokemon selected, then create a new Pokemon BP instance
 			// Open a filestream to the file fitting the pokemon that is selected
-			// Load data from file into the instance
-			// close the file
-			// WE DID IT
 
+			// Load data from file into the instance
+
+			// close the file
+
+			// WE DID IT
 
 			return FReply::Handled();
 		}
 
-		static TSharedRef<SWidget> MakeButton(FText InLabel, const FVector InOffset)
+		static TSharedRef<SWidget> MakeButton(FText InLabel, TSharedPtr< SListView< TSharedPtr<FString> > > list)
 		{
 			return SNew(SButton)
 				.Text(InLabel)
-				.OnClicked_Static(&Locals::OnButtonClick, InOffset);
+				.OnClicked_Static(&Locals::OnButtonClick, list);
 		}
 	};
 
@@ -67,18 +67,19 @@ void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& Init
 				.AutoWrapText(true)
 				.Text(LOCTEXT("HelperLabel", "Select the type of Pokemon to spawn/load"))
 			]
-			//+ SVerticalBox::Slot()
-			//	.HAlign(HAlign_Center)
-			//	.AutoHeight()
-			//	[
-			//		Locals::MakeButton(LOCTEXT("UpButtonLabel", "Browse"), FVector(0, 0, Factor))
-			//	]
 			+ SVerticalBox::Slot()
 				[
 					SAssignNew(ListViewWidget, SListView<TSharedPtr<FString>>)
 					.ItemHeight(24)
 					.ListItemsSource(&Items)
 					.OnGenerateRow(this, &FConfigEditorPluginEdModeToolkit::OnGenerateRowForList)
+					.SelectionMode(ESelectionMode::Single)
+				]
+			+ SVerticalBox::Slot()
+				.HAlign(HAlign_Center)
+				.AutoHeight()
+				[
+					Locals::MakeButton(LOCTEXT("ButtonLabel", "Create Pokemon"), ListViewWidget)
 				]
 		];
 		
