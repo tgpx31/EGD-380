@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\VR_FinalProject.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{76E239E2-1D00-4954-820F-B04C10FEA006}</UniqueIdentifier>
+			<UniqueIdentifier>{2D18F4EA-1679-4EE3-A14F-AD2C4F3BA42A}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\VR_FinalProject.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{DAF0381C-E24B-472C-B0E5-2C139D985C65}</UniqueIdentifier>
+			<UniqueIdentifier>{95A6A45C-8BF0-4024-B3F6-B005622F9363}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -28,22 +28,22 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Plugins">
-			<UniqueIdentifier>{B2A008AD-0D1E-4436-AB38-0503659917B7}</UniqueIdentifier>
+			<UniqueIdentifier>{C81D7588-4FB5-465B-8974-5B9EE5E0700C}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\ConfigEditorPlugin">
-			<UniqueIdentifier>{607E10DD-BE1D-4E79-BB88-297BE1064E8C}</UniqueIdentifier>
+			<UniqueIdentifier>{B6D58662-3F76-47E5-A43C-2F398029E1BA}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\ConfigEditorPlugin\Source">
-			<UniqueIdentifier>{BBB42840-C281-4858-A3FC-AFC4C0E095D9}</UniqueIdentifier>
+			<UniqueIdentifier>{2F016074-71C2-48CB-959A-A566608FE93A}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin">
-			<UniqueIdentifier>{E29A2C54-3017-4CA4-9458-25F4A52618C8}</UniqueIdentifier>
+			<UniqueIdentifier>{D06ED5E4-A98B-4F10-B867-F3A256E372CA}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\ConfigEditorPlugin.Build.cs">
 			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin</Filter>
 		</None >
 		<Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private">
-			<UniqueIdentifier>{F31589F5-2809-432B-8F64-1AF7D8D6CD40}</UniqueIdentifier>
+			<UniqueIdentifier>{4A0E2DD8-AA9B-4989-A90B-F636A94BC439}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private\ConfigEditorPlugin.cpp">
 			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
@@ -61,7 +61,7 @@
 			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
 		</ClCompile >
 		<Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public">
-			<UniqueIdentifier>{B6DFE3B0-1711-4413-B7C8-F06FD85A5E38}</UniqueIdentifier>
+			<UniqueIdentifier>{F873487B-7080-4EE8-8315-801CB295616E}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public\ConfigEditorPlugin.h">
 			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public</Filter>
@@ -79,13 +79,13 @@
 			<Filter>Plugins\ConfigEditorPlugin</Filter>
 		</None >
 		<Filter Include="Plugins\ConfigEditorPlugin\Resources">
-			<UniqueIdentifier>{95832545-9E85-40E7-A529-6492AB238472}</UniqueIdentifier>
+			<UniqueIdentifier>{B821C5F6-39EA-4B87-A423-EDEEE947DD5C}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Plugins\ConfigEditorPlugin\Resources\Icon128.png">
 			<Filter>Plugins\ConfigEditorPlugin\Resources</Filter>
 		</None >
 		<Filter Include="Source\VR_FinalProject">
-			<UniqueIdentifier>{8C365D22-519A-4343-8DEF-A8AC17F942B6}</UniqueIdentifier>
+			<UniqueIdentifier>{A176B243-630F-4DEC-B105-B3693A4A8DB3}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Source\VR_FinalProject\BattleManager.cpp">
 			<Filter>Source\VR_FinalProject</Filter>

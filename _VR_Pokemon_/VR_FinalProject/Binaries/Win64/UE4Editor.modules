@@ -1,8 +1,8 @@
 {
 	"Changelist" : 3142249,
-	"BuildId" : "",
+	"BuildId" : "07a700f8-6a95-4d34-9068-1f90c702415b",
 	"Modules" : 
 	{
-		"VR_FinalProject" : "UE4Editor-VR_FinalProject-6881.dll"
+		"VR_FinalProject" : "UE4Editor-VR_FinalProject.dll"
 	}
 }

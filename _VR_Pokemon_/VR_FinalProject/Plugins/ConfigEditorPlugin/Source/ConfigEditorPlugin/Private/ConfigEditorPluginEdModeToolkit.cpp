@@ -12,6 +12,7 @@
 FConfigEditorPluginEdModeToolkit::FConfigEditorPluginEdModeToolkit()
 {
 	Items.Empty();
+	ListViewWidget = SNew(SListView<TSharedPtr<FString>>);
 }
 
 void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& InitToolkitHost)
@@ -31,11 +32,19 @@ void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& Init
 			FActorSpawnParameters SpawnParam;
 			APokemon* newPokemon = GWorld->SpawnActor<APokemon>(APokemon::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator, SpawnParam);
 
-			// Open a filestream to the file fitting the pokemon that is selected
+			if (!list.IsValid())
+				return FReply::Handled();
 
-			// Load data from file into the instance
+			FString dirPath = "../../../../../ConfigFiles/";
+			TSharedPtr<FString> fileName;
+			fileName = *list->GetSelectedItems().GetData();
+			const FString name = *fileName;
+			FString resultData = "";
+			dirPath.Append(name);
 
-			// close the file
+			const TCHAR* file = *dirPath;
+
+			FFileHelper::LoadFileToString(resultData, file);
 
 			// WE DID IT
 
