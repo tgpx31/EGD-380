@@ -20,6 +20,14 @@ public:
 	virtual class FEdMode* GetEditorMode() const override;
 	virtual TSharedPtr<class SWidget> GetInlineContent() const override { return ToolkitWidget; }
 
+	// FString array of Pokemon available
+	TArray<TSharedPtr<FString>> Items;
+	// Actual list
+	TSharedPtr< SListView< TSharedPtr<FString> > > ListViewWidget;
+
+	// Start interface
+	TSharedRef<ITableRow> FConfigEditorPluginEdModeToolkit::OnGenerateRowForList(TSharedPtr<FString> Item, const TSharedRef<STableViewBase>& OwnerTable);
+	// End interface
 private:
 
 	TSharedPtr<SWidget> ToolkitWidget;

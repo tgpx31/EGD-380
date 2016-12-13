@@ -11,6 +11,8 @@
 
 FConfigEditorPluginEdModeToolkit::FConfigEditorPluginEdModeToolkit()
 {
+	Items.Add(MakeShareable(new FString("Slowbro")));
+	Items.Add(MakeShareable(new FString("Charizard")));
 }
 
 void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& InitToolkitHost)
@@ -24,15 +26,19 @@ void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& Init
 
 		static FReply OnButtonClick(FVector InOffset)
 		{
-			// Grab the Asset
-			/*IAssetTools& A_T = FModuleManager::Get().LoadModuleChecked<FAssetToolsModule>("AssetTools").Get();
-			A_T.ImportAssets("...");*/
+			//// Grab the Asset
+			//IAssetTools& A_T = FModuleManager::Get().LoadModuleChecked<FAssetToolsModule>("AssetTools").Get();
+			//A_T.ImportAssets("...");
+			//
 
-			// enter a name corresponding to the data file
-			// load data from the file into values in an instantiated Pokemon
+			// If there is nothing that nis selected in the list, don't do anything, maybe display a warning to the user
+			// If there is a pokemon selected, then create a new Pokemon BP instance
+			// Open a filestream to the file fitting the pokemon that is selected
+			// Load data from file into the instance
+			// close the file
+			// WE DID IT
 
-			
-			
+
 			return FReply::Handled();
 		}
 
@@ -59,13 +65,20 @@ void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& Init
 			[
 				SNew(STextBlock)
 				.AutoWrapText(true)
-				.Text(LOCTEXT("HelperLabel", "Press the button to select a config file to import"))
+				.Text(LOCTEXT("HelperLabel", "Select the type of Pokemon to spawn/load"))
 			]
+			//+ SVerticalBox::Slot()
+			//	.HAlign(HAlign_Center)
+			//	.AutoHeight()
+			//	[
+			//		Locals::MakeButton(LOCTEXT("UpButtonLabel", "Browse"), FVector(0, 0, Factor))
+			//	]
 			+ SVerticalBox::Slot()
-				.HAlign(HAlign_Center)
-				.AutoHeight()
 				[
-					Locals::MakeButton(LOCTEXT("UpButtonLabel", "Browse"), FVector(0, 0, Factor))
+					SAssignNew(ListViewWidget, SListView<TSharedPtr<FString>>)
+					.ItemHeight(24)
+					.ListItemsSource(&Items)
+					.OnGenerateRow(this, &FConfigEditorPluginEdModeToolkit::OnGenerateRowForList)
 				]
 		];
 		
@@ -85,6 +98,17 @@ FText FConfigEditorPluginEdModeToolkit::GetBaseToolkitName() const
 class FEdMode* FConfigEditorPluginEdModeToolkit::GetEditorMode() const
 {
 	return GLevelEditorModeTools().GetActiveMode(FConfigEditorPluginEdMode::EM_ConfigEditorPluginEdModeId);
+}
+
+TSharedRef<ITableRow> FConfigEditorPluginEdModeToolkit::OnGenerateRowForList(TSharedPtr<FString> Item, const TSharedRef<STableViewBase>& OwnerTable)
+{
+	// Create the row
+	return
+		SNew(STableRow< TSharedPtr<FString> >, OwnerTable)
+		.Padding(2.0f)
+		[
+			SNew(STextBlock).Text(FText::FromString(*Item.Get()))
+		];
 }
 
 #undef LOCTEXT_NAMESPACE

@@ -14,12 +14,18 @@ UObject * UMyConfigFactory::FactoryCreateNew(UClass * Class, UObject * InParent,
 UMyConfigFactory::UMyConfigFactory(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
+	// Take the file
+	// parse the text and read it into the BP instance
+
 	//bCreateNew = true;
 	//bEditAfterNew = true;
 	//bEditorImport = true;
 	bText = true;
 	Formats.Add(TEXT("acfg;Config file for BluePrints"));
 	
-	//TSubclassOf <APokemon> ContextClass;
-	SupportedClass = APokemon::StaticClass();//TSubclassOf <APokemon> SupportedClass;
+	ContextClass = APokemon::StaticClass();		//TSubclassOf <APokemon> ContextClass;
+	SupportedClass = APokemon::StaticClass();	//TSubclassOf <APokemon> SupportedClass;
+
+	ImportPriority = MAX_int32;
 }
+
