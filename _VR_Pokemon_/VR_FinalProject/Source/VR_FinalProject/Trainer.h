@@ -30,12 +30,14 @@ public:
 	template<int option>
 	void optionPressed() { optionPressed(option); };
 
-	void getInput();
+	void promptInput();
 	void attack(APokemon* enemy);
 	void switchPokemon(int index);
 	void promptSwitch();
 	void displayRoster();
 	bool rosterDead();
+
+	inline APokemon* getPokemon() {return mPokemonList[mCurrentPokemon];};
 
 	int mCurrentInput;
 	int mCurrentPokemon;

@@ -1,26 +1,26 @@
 #ifndef TYPE_H
 #define TYPE_H
 
-enum Type
-{
-	NONE = -1,
-	normal = 0,
-	fighting = 1,
-	flying = 2,
-	poison = 3,
-	ground = 4,
-	rock = 5,
-	bug = 6,
-	ghost = 7,
-	fire = 8,
-	water = 9,
-	grass = 10,
-	electric = 11,
-	psychic = 12,
-	ice = 13,
-	dragon = 14,
-	dark = 15
-};
+// enum Type
+// {
+	// NONE = -1,
+	// normal = 0,
+	// fighting = 1,
+	// flying = 2,
+	// poison = 3,
+	// ground = 4,
+	// rock = 5,
+	// bug = 6,
+	// ghost = 7,
+	// fire = 8,
+	// water = 9,
+	// grass = 10,
+	// electric = 11,
+	// psychic = 12,
+	// ice = 13,
+	// dragon = 14,
+	// dark = 15
+// };
 
 static const float TypeChart[16][16] = 
 {

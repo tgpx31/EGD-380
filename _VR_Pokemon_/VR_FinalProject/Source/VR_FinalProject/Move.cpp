@@ -12,6 +12,8 @@ UMove::UMove()
 	bWantsBeginPlay = true;
 	PrimaryComponentTick.bCanEverTick = false;
 
+
+
 	// ...
 }
 

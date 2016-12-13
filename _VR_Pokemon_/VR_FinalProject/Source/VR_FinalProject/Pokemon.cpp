@@ -64,7 +64,7 @@ void APokemon::doDamage(UMove* move, APokemon* Other)
 	float STAB_MULT = 1;
 
 	// Check if Heal || Stat boost || Damage
-	if (move->mMoveAction == heal)
+	if (move->mMoveAction == MoveAction::heal)
 	{
 		// These moves heal you
 		modifyHealth(-static_cast<int>(mMaxHealth / 2));
@@ -77,7 +77,7 @@ void APokemon::doDamage(UMove* move, APokemon* Other)
 		//inform user of healing
 		return;
 	}
-	else if (move->mMoveAction == stat_change)
+	else if (move->mMoveAction == MoveAction::stat_change)
 	{
 		// Raise the corresponding stat
 		modifyStatCoefficient(move->mAffectedStatIndex, move->mStatMultiplier);
@@ -148,12 +148,15 @@ void APokemon::doDamage(UMove* move, APokemon* Other)
 float APokemon::calcResistance(Type moveType, APokemon* other)
 {
 	float finalMult = 1;
+
+	int value = (int)moveType;
+
 	// Compare the moveType to the Pokemons two types
-	finalMult *= TypeChart[moveType][other->mType[0]];
+	finalMult *= TypeChart[(int)moveType][(int)other->mType[0]];
 	if (other->mType[1] == Type::NONE)
 		finalMult *= 1;
 	else
-		finalMult *= TypeChart[moveType][other->mType[1]];
+		finalMult *= TypeChart[(int)moveType][(int)other->mType[1]];
 
 	return finalMult;
 }

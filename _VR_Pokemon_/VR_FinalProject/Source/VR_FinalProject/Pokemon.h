@@ -70,7 +70,8 @@ public:
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadOnly)
 	TArray<UMove*> mpMoveList;
 
-	Type mType[2];
+	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadOnly)
+	TArray<Type> mType;
 
 	//used for stat buffs
 	float mStatCoefficients[5] = { 1.0f,1.0f,1.0f,1.0f,1.0f };	// Does not include HP

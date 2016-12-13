@@ -49,7 +49,7 @@ void ATrainer::optionPressed(int optionNum)
 
 
 //update this to work within an update loop
-void ATrainer::getInput()
+void ATrainer::promptInput()
 {
 	GLog->Log("What will you do?\nFight[1] Switch[2]\n");
 

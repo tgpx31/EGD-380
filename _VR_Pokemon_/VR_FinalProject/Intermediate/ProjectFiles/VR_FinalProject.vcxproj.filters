@@ -1,129 +1,130 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup>
-    <None Include="..\..\VR_FinalProject.uproject" />
-    <Filter Include="Source">
-      <UniqueIdentifier>{8D5AFF90-00C7-4CDA-BFD8-F5424BA7CFA8}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Source\VR_FinalProject.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <None Include="..\..\Source\VR_FinalProjectEditor.Target.cs">
-      <Filter>Source</Filter>
-    </None>
-    <Filter Include="Config">
-      <UniqueIdentifier>{5B173068-36F3-4B6F-861F-156EFD0C7225}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Config\DefaultEditor.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultEngine.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultGame.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultInput.ini">
-      <Filter>Config</Filter>
-    </None>
-    <Filter Include="Plugins">
-      <UniqueIdentifier>{142783B2-32D2-4C9F-BEBA-96F8508B6EAE}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Plugins\ConfigEditorPlugin">
-      <UniqueIdentifier>{41AF2CAD-E677-4690-8041-6AFD78EBBF9C}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Plugins\ConfigEditorPlugin\Source">
-      <UniqueIdentifier>{6D0328CE-D9CA-4B61-8C79-16AD64680DEC}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin">
-      <UniqueIdentifier>{58FD6645-B509-4750-B4A9-4E193B90D974}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\ConfigEditorPlugin.Build.cs">
-      <Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin</Filter>
-    </None>
-    <Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private">
-      <UniqueIdentifier>{1A3A99AC-DF14-41E7-937F-88D1D8FCD8BE}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private\ConfigEditorPlugin.cpp">
-      <Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private\ConfigEditorPluginEdMode.cpp">
-      <Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private\ConfigEditorPluginEdModeToolkit.cpp">
-      <Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private\ConfigEditorPluginPrivatePCH.h">
-      <Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private\MyConfigFactory.cpp">
-      <Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
-    </ClCompile>
-    <Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public">
-      <UniqueIdentifier>{C73525AF-92D5-47C9-AE7E-1D486134A824}</UniqueIdentifier>
-    </Filter>
-    <ClInclude Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public\ConfigEditorPlugin.h">
-      <Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public\ConfigEditorPluginEdMode.h">
-      <Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public\ConfigEditorPluginEdModeToolkit.h">
-      <Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public\MyConfigFactory.h">
-      <Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public</Filter>
-    </ClInclude>
-    <None Include="..\..\Plugins\ConfigEditorPlugin\ConfigEditorPlugin.uplugin">
-      <Filter>Plugins\ConfigEditorPlugin</Filter>
-    </None>
-    <Filter Include="Plugins\ConfigEditorPlugin\Resources">
-      <UniqueIdentifier>{2058224B-36AD-415E-83EF-F3DA09257B44}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\ConfigEditorPlugin\Resources\Icon128.png">
-      <Filter>Plugins\ConfigEditorPlugin\Resources</Filter>
-    </None>
-    <Filter Include="Source\VR_FinalProject">
-      <UniqueIdentifier>{AF9F6D22-87F7-4BD8-91A6-ED13452500F7}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\VR_FinalProject\BattleManager.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\BattleManager.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\VR_FinalProject\GameModeTest.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\GameModeTest.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\VR_FinalProject\Move.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\Move.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\VR_FinalProject\Pokemon.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\Pokemon.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\VR_FinalProject\Trainer.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\Trainer.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-    <None Include="..\..\Source\VR_FinalProject\VR_FinalProject.Build.cs">
-      <Filter>Source\VR_FinalProject</Filter>
-    </None>
-    <ClCompile Include="..\..\Source\VR_FinalProject\VR_FinalProject.cpp">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\VR_FinalProject\VR_FinalProject.h">
-      <Filter>Source\VR_FinalProject</Filter>
-    </ClInclude>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\VR_FinalProject.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{76E239E2-1D00-4954-820F-B04C10FEA006}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\VR_FinalProject.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\VR_FinalProjectEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{DAF0381C-E24B-472C-B0E5-2C139D985C65}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Plugins">
+			<UniqueIdentifier>{B2A008AD-0D1E-4436-AB38-0503659917B7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\ConfigEditorPlugin">
+			<UniqueIdentifier>{607E10DD-BE1D-4E79-BB88-297BE1064E8C}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\ConfigEditorPlugin\Source">
+			<UniqueIdentifier>{BBB42840-C281-4858-A3FC-AFC4C0E095D9}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin">
+			<UniqueIdentifier>{E29A2C54-3017-4CA4-9458-25F4A52618C8}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\ConfigEditorPlugin.Build.cs">
+			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin</Filter>
+		</None >
+		<Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private">
+			<UniqueIdentifier>{F31589F5-2809-432B-8F64-1AF7D8D6CD40}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private\ConfigEditorPlugin.cpp">
+			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private\ConfigEditorPluginEdMode.cpp">
+			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private\ConfigEditorPluginEdModeToolkit.cpp">
+			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private\ConfigEditorPluginPrivatePCH.h">
+			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private\MyConfigFactory.cpp">
+			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Private</Filter>
+		</ClCompile >
+		<Filter Include="Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public">
+			<UniqueIdentifier>{B6DFE3B0-1711-4413-B7C8-F06FD85A5E38}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public\ConfigEditorPlugin.h">
+			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public\ConfigEditorPluginEdMode.h">
+			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public\ConfigEditorPluginEdModeToolkit.h">
+			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public\MyConfigFactory.h">
+			<Filter>Plugins\ConfigEditorPlugin\Source\ConfigEditorPlugin\Public</Filter>
+		</ClInclude >
+		<None Include="..\..\Plugins\ConfigEditorPlugin\ConfigEditorPlugin.uplugin">
+			<Filter>Plugins\ConfigEditorPlugin</Filter>
+		</None >
+		<Filter Include="Plugins\ConfigEditorPlugin\Resources">
+			<UniqueIdentifier>{95832545-9E85-40E7-A529-6492AB238472}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Plugins\ConfigEditorPlugin\Resources\Icon128.png">
+			<Filter>Plugins\ConfigEditorPlugin\Resources</Filter>
+		</None >
+		<Filter Include="Source\VR_FinalProject">
+			<UniqueIdentifier>{8C365D22-519A-4343-8DEF-A8AC17F942B6}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\VR_FinalProject\BattleManager.cpp">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\VR_FinalProject\BattleManager.h">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\VR_FinalProject\GameModeTest.cpp">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\VR_FinalProject\GameModeTest.h">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\VR_FinalProject\Move.cpp">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\VR_FinalProject\Move.h">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\VR_FinalProject\Pokemon.cpp">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\VR_FinalProject\Pokemon.h">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\VR_FinalProject\Trainer.cpp">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\VR_FinalProject\Trainer.h">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClInclude >
+		<None Include="..\..\Source\VR_FinalProject\VR_FinalProject.Build.cs">
+			<Filter>Source\VR_FinalProject</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\VR_FinalProject\VR_FinalProject.cpp">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\VR_FinalProject\VR_FinalProject.h">
+			<Filter>Source\VR_FinalProject</Filter>
+		</ClInclude >
+	</ItemGroup>
 </Project>

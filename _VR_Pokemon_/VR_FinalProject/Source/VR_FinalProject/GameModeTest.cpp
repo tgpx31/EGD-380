@@ -6,7 +6,6 @@
 void AGameModeTest::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	GLog->Log("memes");
 }
 
 
