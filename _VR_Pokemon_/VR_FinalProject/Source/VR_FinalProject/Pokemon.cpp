@@ -165,7 +165,6 @@ float APokemon::calcResistance(Type moveType, APokemon* other)
 
 	// Compare the moveType to the Pokemons two types
 	finalMult *= TypeChart[(int)moveType][(int)other->mType[0]];
-	GLog->Log(FString::FromInt((int)moveType));
 	if (other->mType[1] == Type::NONE)
 		finalMult *= 1;
 	else

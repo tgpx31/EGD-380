@@ -22,6 +22,10 @@ public:
 	virtual void Tick( float DeltaSeconds ) override;
 
 	void player1Attack();
+	void player2Attack();
+
+	bool isP1Faster();
+	bool isEnemyDefeated();
 
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadOnly)
 	ATrainer* mpPlayer1;

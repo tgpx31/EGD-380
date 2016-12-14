@@ -102,17 +102,7 @@ void ATrainer::optionPressed(int optionNum)
 void ATrainer::promptInput()
 {
 	GLog->Log("What will you do?\nFight[1] Switch[2]\n");
-
-	//get input help
-	//if (mCurrentInput == 1) //use a move
-	//{
-	//}
-	//else if (mCurrentInput == 2) //switch pokemon
-	//{
-	//	displayRoster();
-	//	switchPokemon(mCurrentInput);
-	//}
-
+	GLog->Log(" ");
 }
 
 void ATrainer::promptMove()
@@ -125,7 +115,6 @@ void ATrainer::promptMove()
 void ATrainer::attack( APokemon* enemy)
 {
 	mPokemonList[mCurrentPokemon]->useMove(mCurrentInput - 1, enemy);
-
 	//probably going to put other logistics here
 }
 
@@ -151,6 +140,22 @@ void ATrainer::resetBools()
 
 	mAttack = false;
 	mSwitch = false;
+}
+
+bool ATrainer::rosterDead()
+{
+	bool dead = true;
+
+	for (int i = 0; i < mPokemonList.Num(); ++i)
+	{
+		if (!mPokemonList[i]->didFaint())
+		{
+			dead = false;
+			break;
+		}
+	}
+
+	return dead;
 }
 
 void ATrainer::displayRoster()
