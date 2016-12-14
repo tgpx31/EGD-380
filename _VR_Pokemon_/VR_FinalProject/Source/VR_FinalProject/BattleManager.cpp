@@ -37,6 +37,9 @@ void ABattleManager::Tick( float DeltaTime )
 	{
 		player1Attack();
 		mpPlayer1->resetBools();
+
+		//do ai player stuff here
+		mUpdating = true;
 	}
 }
 

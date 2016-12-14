@@ -56,27 +56,27 @@ void ATrainer::optionPressed(int optionNum)
 	switch (mCurrentInput)
 	{
 	case 1:
-		if (mBeginMove == false) //for the first stage of player decision, choosing whether to fight or switch
+		if (mChooseMove) //informs the battle manager that player attack is ready
+		{
+			mAttack = true;
+		}
+		else if (mBeginMove == false) //for the first stage of player decision, choosing whether to fight or switch
 		{
 			mBeginMove = true;
 			promptMove();
 			mChooseMove = true;
-		}
-		else if (mChooseMove) //informs the battle manager that player attack is ready
-		{
-			mAttack = true;
-		}
+		}		
 		break;
 
 	case 2:
-		if (mBeginSwitch == false) //for the first stage of player decision, choosing whether to fight or switch
+		if (mChooseMove) //informs the battle manager that player attack is ready
+		{
+			mAttack = true;
+		}
+		else if (mBeginSwitch == false) //for the first stage of player decision, choosing whether to fight or switch
 		{
 			mBeginSwitch = true;
 			promptSwitch();
-		}
-		else if (mChooseMove) //informs the battle manager that player attack is ready
-		{
-			mAttack = true;
 		}
 		break;
 
@@ -104,14 +104,14 @@ void ATrainer::promptInput()
 	GLog->Log("What will you do?\nFight[1] Switch[2]\n");
 
 	//get input help
-	if (mCurrentInput == 1) //use a move
-	{
-	}
-	else if (mCurrentInput == 2) //switch pokemon
-	{
-		displayRoster();
-		switchPokemon(mCurrentInput);
-	}
+	//if (mCurrentInput == 1) //use a move
+	//{
+	//}
+	//else if (mCurrentInput == 2) //switch pokemon
+	//{
+	//	displayRoster();
+	//	switchPokemon(mCurrentInput);
+	//}
 
 }
 
@@ -138,7 +138,7 @@ void ATrainer::promptSwitch()
 
 void ATrainer::switchPokemon(int index)
 {
-	mCurrentPokemon = index;
+	mCurrentPokemon = index - 1;
 	GLog->Log("You switched to " + mPokemonList[mCurrentPokemon]->GetName() + "!");
 }
 
@@ -157,7 +157,7 @@ void ATrainer::displayRoster()
 {
 	for (int i = 0; i < mPokemonList.Num(); ++i)
 	{
-		GLog->Log(mPokemonList[i]->GetName() + " [" + FString::FromInt(i) + "]");
+		GLog->Log(mPokemonList[i]->GetName() + " [" + FString::FromInt(i + 1) + "]");
 	}
 }
 
@@ -166,6 +166,6 @@ void ATrainer::displayActiveRoster()
 	for (int i = 0; i < mPokemonList.Num(); ++i)
 	{
 		if (!mPokemonList[i]->didFaint())
-			GLog->Log(mPokemonList[i]->GetName() + " [" + FString::FromInt(i) + "]");
+			GLog->Log(mPokemonList[i]->GetName() + " [" + FString::FromInt(i + 1) + "]");
 	}
 }

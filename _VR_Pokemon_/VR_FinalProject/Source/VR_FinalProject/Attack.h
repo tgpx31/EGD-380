@@ -18,23 +18,23 @@ enum class MoveAction : uint8
 UENUM(BlueprintType)
 enum class Type : uint8
 {
-	NONE,
-	normal,
-	fighting,
-	flying,
-	poison,
-	ground,
-	rock,
-	bug,
-	ghost,
-	fire,
-	water,
-	grass,
-	electric,
-	psychic,
-	ice,
-	dragon,
-	dark
+	normal = 0,
+	fighting = 1,
+	flying = 2,
+	poison = 3,
+	ground = 4,
+	rock = 5,
+	bug = 6,
+	ghost = 7,
+	fire = 8,
+	water = 9,
+	grass = 10,
+	electric = 11,
+	psychic = 12,
+	ice = 13,
+	dragon = 14,
+	dark = 15,
+	NONE = 16
 };
 
 
