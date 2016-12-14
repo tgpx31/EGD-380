@@ -3,7 +3,7 @@
 #pragma once
 
 #include "../Pokemon_C++/Type.h"
-#include "Move.h"
+#include "Attack.h"
 #include "GameFramework/Pawn.h"
 #include "Pokemon.generated.h"
 
@@ -32,14 +32,14 @@ public:
 	inline bool didFaint() { return mCurrentHealth <= 0; };
 	 
 	void useMove(int index, APokemon* target);
-	void doDamage(UMove* move, APokemon* Other);
+	void doDamage(AAttack* move, APokemon* Other);
 	float calcResistance(Type moveType, APokemon* other);
 
 	void displayMoveList();
 
-	/* The mesh component */
-	UPROPERTY(Category = Meshes, EditAnywhere, BlueprintReadWrite)
-	class UStaticMeshComponent* PokemonMeshComponent;
+	///* The mesh component */
+	//UPROPERTY(Category = Meshes, EditAnywhere, BlueprintReadWrite)
+	//class UStaticMeshComponent* PokemonMeshComponent;
 
 	//member variables for battle
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
@@ -68,7 +68,7 @@ public:
 
 	//actor components
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadOnly)
-	TArray<UMove*> mpMoveList;
+	TArray<AAttack*> mpMoveList;
 
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadOnly)
 	TArray<Type> mType;

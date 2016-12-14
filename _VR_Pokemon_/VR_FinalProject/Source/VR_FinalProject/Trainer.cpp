@@ -14,7 +14,14 @@ ATrainer::ATrainer()
 
 	mCurrentInput = 0;
 	mCurrentPokemon = 0;
-	mInputOpen = true;
+
+	mBeginMove = false;
+	mBeginSwitch = false;
+	mChooseMove = false;
+	mChooseSwitch = false;
+
+	mAttack = false;
+	mSwitch = false;
 }
 
 // Called when the game starts or when spawned
@@ -44,7 +51,50 @@ void ATrainer::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 void ATrainer::optionPressed(int optionNum)
 {
 	mCurrentInput = optionNum;
-	GLog->Log(FString::FromInt(mCurrentInput));
+	//GLog->Log(FString::FromInt(mCurrentInput));
+
+	switch (mCurrentInput)
+	{
+	case 1:
+		if (mBeginMove == false) //for the first stage of player decision, choosing whether to fight or switch
+		{
+			mBeginMove = true;
+			promptMove();
+			mChooseMove = true;
+		}
+		else if (mChooseMove) //informs the battle manager that player attack is ready
+		{
+			mAttack = true;
+		}
+		break;
+
+	case 2:
+		if (mBeginSwitch == false) //for the first stage of player decision, choosing whether to fight or switch
+		{
+			mBeginSwitch = true;
+			promptSwitch();
+		}
+		else if (mChooseMove) //informs the battle manager that player attack is ready
+		{
+			mAttack = true;
+		}
+		break;
+
+	case 3:
+		if (mChooseMove) //informs the battle manager that player attack is ready
+		{
+			mAttack = true;
+		}
+		break;
+
+	case 4:
+		if (mChooseMove) //informs the battle manager that player attack is ready
+		{
+			mAttack = true;
+		}
+		break;
+
+	}
 }
 
 
@@ -56,9 +106,6 @@ void ATrainer::promptInput()
 	//get input help
 	if (mCurrentInput == 1) //use a move
 	{
-		GLog->Log("Your move: What should " + mPokemonList[mCurrentPokemon]->mName.ToString() + "do?");
-		mPokemonList[mCurrentPokemon]->displayMoveList();
-		//get input here
 	}
 	else if (mCurrentInput == 2) //switch pokemon
 	{
@@ -68,9 +115,16 @@ void ATrainer::promptInput()
 
 }
 
+void ATrainer::promptMove()
+{
+	GLog->Log("");
+	GLog->Log("Your move: What should " + mPokemonList[mCurrentPokemon]->mName.ToString() + " do?");
+	mPokemonList[mCurrentPokemon]->displayMoveList();
+}
+
 void ATrainer::attack( APokemon* enemy)
 {
-	mPokemonList[mCurrentPokemon]->useMove(mCurrentInput, enemy);
+	mPokemonList[mCurrentPokemon]->useMove(mCurrentInput - 1, enemy);
 
 	//probably going to put other logistics here
 }
@@ -78,24 +132,8 @@ void ATrainer::attack( APokemon* enemy)
 //update this to work within an update loop
 void ATrainer::promptSwitch()
 {
-	bool exit = false;
-
-	while (!exit)
-	{
-		GLog->Log("What Pokemon will you switch to?");
-		displayRoster();
-
-		//GET INPUT HERE
-
-		if (mPokemonList[mCurrentInput]->didFaint())
-		{
-			GLog->Log("That Pokemon is fainted! Try again. \n");
-		}
-		else
-		{
-			exit = true;
-		}
-	}
+	GLog->Log("What Pokemon will you switch to?");
+	displayActiveRoster();
 }
 
 void ATrainer::switchPokemon(int index)
@@ -104,10 +142,30 @@ void ATrainer::switchPokemon(int index)
 	GLog->Log("You switched to " + mPokemonList[mCurrentPokemon]->GetName() + "!");
 }
 
+void ATrainer::resetBools()
+{
+	mBeginMove = false;
+	mBeginSwitch = false;
+	mChooseMove = false;
+	mChooseSwitch = false;
+
+	mAttack = false;
+	mSwitch = false;
+}
+
 void ATrainer::displayRoster()
 {
 	for (int i = 0; i < mPokemonList.Num(); ++i)
 	{
 		GLog->Log(mPokemonList[i]->GetName() + " [" + FString::FromInt(i) + "]");
+	}
+}
+
+void ATrainer::displayActiveRoster()
+{
+	for (int i = 0; i < mPokemonList.Num(); ++i)
+	{
+		if (!mPokemonList[i]->didFaint())
+			GLog->Log(mPokemonList[i]->GetName() + " [" + FString::FromInt(i) + "]");
 	}
 }

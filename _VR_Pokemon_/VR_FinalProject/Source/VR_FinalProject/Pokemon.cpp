@@ -38,12 +38,14 @@ void APokemon::useMove(int index, APokemon* target)
 	if (mpMoveList[index]->mPP <= 0)
 	{
 		//tell the user the move is out of pp, return to battle loop
+		GLog->Log("The move failed! It is out of PP!");
 		return;
 	}
 
 	if (mpMoveList[index]->mAccuracy >= randomNumber(MIN_ACCURACY, MAX_RAND_NUM))
 	{
 		//display what move the user used
+		GLog->Log(mName.ToString() + " used " + mpMoveList[index]->mName.ToString() + ".");
 		doDamage(mpMoveList[index], target);
 
 		//reduce PP
@@ -54,10 +56,11 @@ void APokemon::useMove(int index, APokemon* target)
 	else
 	{
 		//tell user the attack missed
+		GLog->Log("The attack missed!");
 	}
 }
 
-void APokemon::doDamage(UMove* move, APokemon* Other)
+void APokemon::doDamage(AAttack* move, APokemon* Other)
 {
 	int damage;
 	float weakness = 1;
@@ -75,6 +78,7 @@ void APokemon::doDamage(UMove* move, APokemon* Other)
 		}
 
 		//inform user of healing
+		GLog->Log(mName.ToString() + " healed!");
 		return;
 	}
 	else if (move->mMoveAction == MoveAction::stat_change)
@@ -92,8 +96,11 @@ void APokemon::doDamage(UMove* move, APokemon* Other)
 		}
 
 		if (move->mStatMultiplier > 1)
+		{
 			//tell the user about the buff
-
+			GLog->Log("The corresponding stat was increased!");
+		}
+			
 		return;
 	}
 
@@ -112,14 +119,17 @@ void APokemon::doDamage(UMove* move, APokemon* Other)
 	if (weakness > 1)
 	{
 		//tell the user it was Super Effective!
+		GLog->Log("The move was Super Effective!");
 	}	
 	else if (weakness < 1 && weakness > 0)
 	{
 		//tell the user it wasn't very effective :(
+		GLog->Log("The move wasn't very effective...");
 	}	
 	else if (weakness == 0)
 	{
 		//tell the user it did NOTHING.
+		GLog->Log("The move didn't do any damage!");
 		return;
 	}
 
@@ -133,15 +143,17 @@ void APokemon::doDamage(UMove* move, APokemon* Other)
 	// Deal the damage to the target
 	//Tell the user how much damage was done
 	Other->modifyHealth(damage);
+	GLog->Log(mName.ToString() + " did " + FString::FromInt(damage) + " damage to " + Other->mName.ToString());
+
 	if (Other->mCurrentHealth < 0)
 	{
-		//Other->modifyHealth(-getHealth());
 		//tell the user if the enemy fainted!
-		// Declare a winner
+		GLog->Log(Other->mName.ToString() + " fainted!");
 	}
 	else
 	{
 		//tell the user how much health the enemy has left
+		GLog->Log(Other->mName.ToString() + " has " + FString::FromInt(Other->mCurrentHealth) + " health left!");
 	}	
 }
 

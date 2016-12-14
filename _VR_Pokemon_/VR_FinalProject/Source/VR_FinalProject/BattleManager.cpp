@@ -32,5 +32,15 @@ void ABattleManager::Tick( float DeltaTime )
 
 		mpPlayer1->promptInput();
 	}
+
+	if (mpPlayer1->mAttack)
+	{
+		player1Attack();
+		mpPlayer1->resetBools();
+	}
 }
 
+void ABattleManager::player1Attack()
+{
+	mpPlayer1->attack(mEnemyList[mCurrentEnemy]);
+}

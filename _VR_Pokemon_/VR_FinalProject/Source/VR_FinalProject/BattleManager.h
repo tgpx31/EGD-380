@@ -21,6 +21,8 @@ public:
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
 
+	void player1Attack();
+
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadOnly)
 	ATrainer* mpPlayer1;
 

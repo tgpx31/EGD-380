@@ -25,23 +25,43 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
+	//input handling function that sets mCurrentInput
 	void optionPressed(int optionNum);
 
 	template<int option>
 	void optionPressed() { optionPressed(option); };
 
+	//functions that prompt user input, may become useless later
 	void promptInput();
+	void promptSwitch();
+	void promptMove();
+
+	//displays info to the user
+	void displayRoster();
+	void displayActiveRoster();
+
+	//general use battle fucntions
 	void attack(APokemon* enemy);
 	void switchPokemon(int index);
-	void promptSwitch();
-	void displayRoster();
+	void resetBools();
+
 	bool rosterDead();
 
 	inline APokemon* getPokemon() {return mPokemonList[mCurrentPokemon];};
 
+	//keeps track of ints that designate player state
 	int mCurrentInput;
 	int mCurrentPokemon;
-	bool mInputOpen;
+
+	//bools that handle input states
+	bool mBeginMove;
+	bool mBeginSwitch;
+	bool mChooseMove;
+	bool mChooseSwitch;
+
+	//bools that communicate with the battle manager
+	bool mAttack;
+	bool mSwitch;
 
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadOnly)
 	bool mIsPlayer;
