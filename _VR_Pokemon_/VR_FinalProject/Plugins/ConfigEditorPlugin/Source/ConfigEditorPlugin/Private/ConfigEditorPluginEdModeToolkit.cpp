@@ -19,6 +19,7 @@ void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& Init
 {
 	Items.Add(MakeShareable(new FString("Slowbro")));
 	Items.Add(MakeShareable(new FString("Charizard")));
+	
 
 	struct Locals
 	{
@@ -27,35 +28,49 @@ void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& Init
 			return true;
 		}
 
-		static FReply OnButtonClick(TSharedPtr< SListView< TSharedPtr<FString> > > list)
+		static FReply OnButtonClick(TSharedPtr< SListView< TSharedPtr<FString> > > list, TArray<TSharedPtr<FString>> items)
 		{
 			FActorSpawnParameters SpawnParam;
 			APokemon* newPokemon = GWorld->SpawnActor<APokemon>(APokemon::StaticClass(), FVector::ZeroVector, FRotator::ZeroRotator, SpawnParam);
 
 			if (!list.IsValid())
 				return FReply::Handled();
+			if (list->IsPendingRefresh())
+				return FReply::Handled();
+
+			FString pokemonBreed;
+
+			for (int i = 0; i < list->GetNumItemsBeingObserved(); ++i)
+			{
+				// Check if the item is selected
+				if (list->IsItemSelected(items[i]))
+				{
+					// set the FString and break
+					pokemonBreed.Append(*items[i]);
+				}
+			}
 
 			FString dirPath = "../../../../../ConfigFiles/";
 			TSharedPtr<FString> fileName;
-			fileName = *list->GetSelectedItems().GetData();
+			/*fileName = *list->GetSelectedItems().GetData();
 			const FString name = *fileName;
 			FString resultData = "";
 			dirPath.Append(name);
 
 			const TCHAR* file = *dirPath;
 
-			FFileHelper::LoadFileToString(resultData, file);
+			FFileHelper::LoadFileToString(resultData, file);*/
 
 			// WE DID IT
 
 			return FReply::Handled();
 		}
 
-		static TSharedRef<SWidget> MakeButton(FText InLabel, TSharedPtr< SListView< TSharedPtr<FString> > > list)
+		static TSharedRef<SWidget> MakeButton(FText InLabel, TSharedPtr< SListView< TSharedPtr<FString> > > list, TArray<TSharedPtr<FString>> items)
 		{
 			return SNew(SButton)
 				.Text(InLabel)
-				.OnClicked_Static(&Locals::OnButtonClick, list);
+				.OnClicked_Static(&Locals::OnButtonClick, list, items);
 		}
 	};
 
@@ -83,12 +98,14 @@ void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& Init
 					.ListItemsSource(&Items)
 					.OnGenerateRow(this, &FConfigEditorPluginEdModeToolkit::OnGenerateRowForList)
 					.SelectionMode(ESelectionMode::Single)
+					//.OnMouseButtonClick(this, &FConfigEditorPluginEdModeToolkit::refresh)
+					//.OnSelectionChanged(this, &FConfigEditorPluginEdModeToolkit::OnSelectionChanged)
 				]
 			+ SVerticalBox::Slot()
 				.HAlign(HAlign_Center)
 				.AutoHeight()
 				[
-					Locals::MakeButton(LOCTEXT("ButtonLabel", "Create Pokemon"), ListViewWidget)
+					Locals::MakeButton(LOCTEXT("ButtonLabel", "Create Pokemon"), ListViewWidget, Items)
 				]
 		];
 		
@@ -117,8 +134,14 @@ TSharedRef<ITableRow> FConfigEditorPluginEdModeToolkit::OnGenerateRowForList(TSh
 		SNew(STableRow< TSharedPtr<FString> >, OwnerTable)
 		.Padding(2.0f)
 		[
-			SNew(STextBlock).Text(FText::FromString(*Item.Get()))
+			SNew(STextBlock).Text(FText::FromString(*Item))
 		];
+}
+
+FReply FConfigEditorPluginEdModeToolkit::refresh()
+{
+	ListViewWidget->RequestListRefresh();
+	return FReply::Handled();
 }
 
 #undef LOCTEXT_NAMESPACE

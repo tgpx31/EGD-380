@@ -27,7 +27,9 @@ public:
 
 	// Start interface
 	TSharedRef<ITableRow> FConfigEditorPluginEdModeToolkit::OnGenerateRowForList(TSharedPtr<FString> Item, const TSharedRef<STableViewBase>& OwnerTable);
+	//void FConfigEditorPluginEdModeToolkit::OnSelectionChanged(TSharedPtr<FString> Item);
 	// End interface
+	FReply refresh();
 private:
 
 	TSharedPtr<SWidget> ToolkitWidget;
