@@ -35,3 +35,62 @@ void UMenuComponent::TickComponent( float DeltaTime, ELevelTick TickType, FActor
 	// ...
 }
 
+//Processing when the player presses enter on the menu
+void UMenuComponent::processEnterPress()
+{
+	//Depending on what screen of the menu that the player is on
+	switch (mEMenuScreen)
+	{
+		//If it's on the main screen
+	case EMenuScreens::MENU_SCREEN_BASE:
+		switch (mEMenuState)
+		{
+		case EMenuState::MENU_STATE_LEFT:
+			mEMenuScreen = EMenuScreens::MENU_SCREEN_MOVES;
+			break;
+		case EMenuState::MENU_STATE_RIGHT:
+			mEMenuScreen = EMenuScreens::MENU_SCREEN_POKEMON;
+			break;
+		}
+		break;
+	case EMenuScreens::MENU_SCREEN_MOVES:
+		switch (mEMenuState)
+		{
+		case EMenuState::MENU_STATE_LEFT:
+			break;
+		case EMenuState::MENU_STATE_RIGHT:
+			break;
+		case EMenuState::MENU_STATE_BOTTOM:
+			break;
+		case EMenuState::MENU_STATE_TOP:
+			break;
+		}
+		break;
+	case EMenuScreens::MENU_SCREEN_POKEMON:
+		switch (mEMenuState)
+		{
+		case EMenuState::MENU_STATE_LEFT:
+			break;
+		case EMenuState::MENU_STATE_RIGHT:
+			break;
+		case EMenuState::MENU_STATE_BOTTOM:
+			break;
+		case EMenuState::MENU_STATE_TOP:
+			break;
+		}
+		break;
+	}
+}
+
+void UMenuComponent::processEscapePress()
+{
+	switch (mEMenuScreen)
+	{
+	case EMenuScreens::MENU_SCREEN_MOVES:
+		mEMenuScreen = EMenuScreens::MENU_SCREEN_BASE;
+		break;
+	case EMenuScreens::MENU_SCREEN_POKEMON:
+		mEMenuScreen = EMenuScreens::MENU_SCREEN_BASE;
+		break;
+	}
+}

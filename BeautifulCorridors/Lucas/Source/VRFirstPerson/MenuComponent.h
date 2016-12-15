@@ -50,6 +50,12 @@ public:
 	UFUNCTION(BlueprintCallable, category = "Enum")
 		void setMenuScreen(EMenuScreens menuScreen) { mEMenuScreen = menuScreen; };
 
+	UFUNCTION(BlueprintCallable, category = "Menu")
+		void processEnterPress();
+
+	UFUNCTION(BlueprintCallable, category = "Menu")
+		void processEscapePress();
+
 private:
 	EMenuState mEMenuState;
 	EMenuScreens mEMenuScreen;
