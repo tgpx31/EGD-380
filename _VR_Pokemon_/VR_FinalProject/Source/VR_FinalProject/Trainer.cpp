@@ -60,6 +60,10 @@ void ATrainer::optionPressed(int optionNum)
 		{
 			mAttack = true;
 		}
+		else if (mChooseSwitch)
+		{
+			mSwitch = true;
+		}
 		else if (mBeginMove == false) //for the first stage of player decision, choosing whether to fight or switch
 		{
 			mBeginMove = true;
@@ -73,10 +77,15 @@ void ATrainer::optionPressed(int optionNum)
 		{
 			mAttack = true;
 		}
+		else if (mChooseSwitch)
+		{
+			mSwitch = true;
+		}
 		else if (mBeginSwitch == false) //for the first stage of player decision, choosing whether to fight or switch
 		{
 			mBeginSwitch = true;
 			promptSwitch();
+			mChooseSwitch = true;
 		}
 		break;
 
@@ -85,12 +94,20 @@ void ATrainer::optionPressed(int optionNum)
 		{
 			mAttack = true;
 		}
+		else if (mChooseSwitch)
+		{
+			mSwitch = true;
+		}
 		break;
 
 	case 4:
 		if (mChooseMove) //informs the battle manager that player attack is ready
 		{
 			mAttack = true;
+		}
+		else if (mChooseSwitch)
+		{
+			mSwitch = true;
 		}
 		break;
 
@@ -109,6 +126,7 @@ void ATrainer::promptMove()
 {
 	GLog->Log("");
 	GLog->Log("Your move: What should " + mPokemonList[mCurrentPokemon]->mName.ToString() + " do?");
+	GLog->Log("");
 	mPokemonList[mCurrentPokemon]->displayMoveList();
 }
 
@@ -125,10 +143,10 @@ void ATrainer::promptSwitch()
 	displayActiveRoster();
 }
 
-void ATrainer::switchPokemon(int index)
+void ATrainer::switchPokemon()
 {
-	mCurrentPokemon = index - 1;
-	GLog->Log("You switched to " + mPokemonList[mCurrentPokemon]->GetName() + "!");
+	mCurrentPokemon = mCurrentInput - 1;
+	GLog->Log("You switched to " + mPokemonList[mCurrentPokemon]->mName.ToString() + "!");
 }
 
 void ATrainer::resetBools()
@@ -162,7 +180,7 @@ void ATrainer::displayRoster()
 {
 	for (int i = 0; i < mPokemonList.Num(); ++i)
 	{
-		GLog->Log(mPokemonList[i]->GetName() + " [" + FString::FromInt(i + 1) + "]");
+		GLog->Log(mPokemonList[i]->mName.ToString() + " [" + FString::FromInt(i + 1) + "]");
 	}
 }
 
@@ -171,6 +189,6 @@ void ATrainer::displayActiveRoster()
 	for (int i = 0; i < mPokemonList.Num(); ++i)
 	{
 		if (!mPokemonList[i]->didFaint())
-			GLog->Log(mPokemonList[i]->GetName() + " [" + FString::FromInt(i + 1) + "]");
+			GLog->Log(mPokemonList[i]->mName.ToString() + " [" + FString::FromInt(i + 1) + "]");
 	}
 }

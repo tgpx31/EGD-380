@@ -42,7 +42,9 @@ public:
 
 	//general use battle fucntions
 	void attack(APokemon* enemy);
-	void switchPokemon(int index);
+	void switchPokemon();
+	inline void enterSwitchState() { mChooseMove = false; mChooseSwitch = true; };
+	//inline void enterBattleState() { mBeginSwitch = false; mBeginMove = true; };
 	void resetBools();
 
 	bool rosterDead();

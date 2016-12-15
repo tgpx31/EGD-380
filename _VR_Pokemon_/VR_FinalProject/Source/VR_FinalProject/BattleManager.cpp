@@ -10,6 +10,7 @@ ABattleManager::ABattleManager()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	mUpdating = true;
+	mEmergencySwitch = false;
 	mCurrentEnemy = 0;
 }
 
@@ -27,30 +28,42 @@ void ABattleManager::Tick(float DeltaTime)
 
 	if (mUpdating)
 	{
-		GLog->Log(" ");
-		GLog->Log(mpPlayer1->getPokemon()->mName.ToString() + " vs " + mEnemyList[mCurrentEnemy]->mName.ToString() + "!");
-		mUpdating = false;
+		if (mEmergencySwitch) //prompt correct info depending on player situation
+		{
+			mpPlayer1->promptSwitch();
+			mpPlayer1->enterSwitchState();
+		}
+		else
+		{
+			GLog->Log(" ");
+			GLog->Log(mpPlayer1->getPokemon()->mName.ToString() + " vs " + mEnemyList[mCurrentEnemy]->mName.ToString() + "!");
 
-		mpPlayer1->promptInput();
+			mpPlayer1->promptInput();
+			GLog->Log(" ");
+		}
+		
+		mUpdating = false;
 	}
 
-	if (mpPlayer1->mAttack)
+	if (mpPlayer1->mAttack) //if attack was chosen
 	{
 		//determine turn order
-		if (isP1Faster())
+		if (isP1Faster()) 
 		{
 			player1Attack();
 			GLog->Log(" ");
-			player2Attack();
+
+			if (!mEnemyList[mCurrentEnemy]->didFaint()) //ensures a dead pokemon isn't attacking
+				player2Attack();
 		}
 		else
 		{
 			player2Attack();
 			GLog->Log(" ");
-			player1Attack();
-		}
 
-		mpPlayer1->resetBools();
+			if (!mpPlayer1->getPokemon()->didFaint())
+				player1Attack();
+		}
 
 		//check win/lose states
 		if (isEnemyDefeated())
@@ -63,14 +76,63 @@ void ABattleManager::Tick(float DeltaTime)
 		}
 		else //continue loop
 		{
+			if (mpPlayer1->getPokemon()->didFaint()) //if player's pokemon fainted, choose new one
+			{
+				mEmergencySwitch = true;
+			}
+			else if (mEnemyList[mCurrentEnemy]->didFaint()) //if enemy's pokemon fainted, choose new one
+			{
+				player2Switch();
+			}
+
 			mUpdating = true;
-		}	
+		}
+
+		mpPlayer1->resetBools();
+	}
+	else if (mEmergencySwitch && mpPlayer1->mSwitch) //switch pokemon when new one is absolutely needed
+	{
+		player1Switch();
+		GLog->Log(" ");
+
+		//return back to normal game loop
+		mpPlayer1->resetBools();
+		mEmergencySwitch = false;
+		mUpdating = true;
+	}
+	else if (mpPlayer1->mSwitch) //normal in turn pokemon switch
+	{
+		player1Switch();
+		GLog->Log(" ");
+		player2Attack();
+
+		mpPlayer1->resetBools();
+
+		//check win/lose states
+		if (mpPlayer1->rosterDead())
+		{
+			GLog->Log("You lose!");
+		}
+		else //continue loop
+		{
+			if (mpPlayer1->getPokemon()->didFaint()) //if player's pokemon fainted, choose new one
+			{
+				mEmergencySwitch = true;
+			}
+
+			mUpdating = true;
+		}
 	}
 }
 
 void ABattleManager::player1Attack()
 {
 	mpPlayer1->attack(mEnemyList[mCurrentEnemy]);
+}
+
+void ABattleManager::player1Switch()
+{
+	mpPlayer1->switchPokemon();
 }
 
 void ABattleManager::player2Attack()
@@ -80,6 +142,23 @@ void ABattleManager::player2Attack()
 	mEnemyList[mCurrentEnemy]->useMove(move, mpPlayer1->getPokemon());
 }
 
+void ABattleManager::player2Switch()
+{
+	bool exit = false;
+
+	while (exit == false)
+	{
+		int num = randomNumber(0, mEnemyList.Num() - 1);
+
+		if (!mEnemyList[num]->didFaint())
+		{
+			mCurrentEnemy = num;
+			exit = true;
+		}
+	}
+
+	GLog->Log("The enemy sent out " + mEnemyList[mCurrentEnemy]->mName.ToString() + "!");
+}
 
 bool ABattleManager::isP1Faster()
 {
