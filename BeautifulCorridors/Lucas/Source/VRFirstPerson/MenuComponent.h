@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "Trainer.h"
 #include "Components/ActorComponent.h"
 #include "MenuComponent.generated.h"
 
@@ -55,6 +56,12 @@ public:
 
 	UFUNCTION(BlueprintCallable, category = "Menu")
 		void processEscapePress();
+
+	UFUNCTION(BlueprintCallable, category = "Sin")
+		void trainerOptionSelect();
+
+	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
+		ATrainer* mpTrainer;
 
 private:
 	EMenuState mEMenuState;

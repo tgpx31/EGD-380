@@ -57,12 +57,16 @@ void UMenuComponent::processEnterPress()
 		switch (mEMenuState)
 		{
 		case EMenuState::MENU_STATE_LEFT:
+			mEMenuScreen = EMenuScreens::MENU_SCREEN_BASE;
 			break;
 		case EMenuState::MENU_STATE_RIGHT:
+			mEMenuScreen = EMenuScreens::MENU_SCREEN_BASE;
 			break;
 		case EMenuState::MENU_STATE_BOTTOM:
+			mEMenuScreen = EMenuScreens::MENU_SCREEN_BASE;
 			break;
 		case EMenuState::MENU_STATE_TOP:
+			mEMenuScreen = EMenuScreens::MENU_SCREEN_BASE;
 			break;
 		}
 		break;
@@ -70,12 +74,16 @@ void UMenuComponent::processEnterPress()
 		switch (mEMenuState)
 		{
 		case EMenuState::MENU_STATE_LEFT:
+			mEMenuScreen = EMenuScreens::MENU_SCREEN_BASE;
 			break;
 		case EMenuState::MENU_STATE_RIGHT:
+			mEMenuScreen = EMenuScreens::MENU_SCREEN_BASE;
 			break;
 		case EMenuState::MENU_STATE_BOTTOM:
+			mEMenuScreen = EMenuScreens::MENU_SCREEN_BASE;
 			break;
 		case EMenuState::MENU_STATE_TOP:
+			mEMenuScreen = EMenuScreens::MENU_SCREEN_BASE;
 			break;
 		}
 		break;
@@ -91,6 +99,25 @@ void UMenuComponent::processEscapePress()
 		break;
 	case EMenuScreens::MENU_SCREEN_POKEMON:
 		mEMenuScreen = EMenuScreens::MENU_SCREEN_BASE;
+		break;
+	}
+}
+
+void UMenuComponent::trainerOptionSelect()
+{
+	switch (mEMenuState)
+	{
+	case EMenuState::MENU_STATE_LEFT:
+		mpTrainer->optionPressed(1);
+		break;
+	case EMenuState::MENU_STATE_RIGHT:
+		mpTrainer->optionPressed(2);
+		break;
+	case EMenuState::MENU_STATE_BOTTOM:
+		mpTrainer->optionPressed(4);
+		break;
+	case EMenuState::MENU_STATE_TOP:
+		mpTrainer->optionPressed(3);
 		break;
 	}
 }

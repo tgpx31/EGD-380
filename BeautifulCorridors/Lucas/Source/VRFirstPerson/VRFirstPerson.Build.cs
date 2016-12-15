@@ -8,5 +8,7 @@ public class VRFirstPerson : ModuleRules
 
         /* VR Required Modules */ 
 		PrivateDependencyModuleNames.AddRange(new string[] { "HeadMountedDisplay" });
-	}
+
+        PrivateIncludePaths.Add("../Pokemon_C++/Type.h");
+    }
 }
