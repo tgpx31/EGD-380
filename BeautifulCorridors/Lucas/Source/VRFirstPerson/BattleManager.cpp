@@ -79,7 +79,8 @@ void ABattleManager::Tick(float DeltaTime)
 		{
 			if (mpPlayer1->getPokemon()->didFaint()) //if player's pokemon fainted, choose new one
 			{
-				mEmergencySwitch = true;
+				player1Switch();
+				//mEmergencySwitch = true;
 			}
 			else if (mEnemyList[mCurrentEnemy]->didFaint()) //if enemy's pokemon fainted, choose new one
 			{
@@ -133,7 +134,7 @@ void ABattleManager::player1Attack()
 
 void ABattleManager::player1Switch()
 {
-	mpPlayer1->switchPokemon();
+	mpPlayer1->switchPokemonToOther();
 }
 
 void ABattleManager::player2Attack()
