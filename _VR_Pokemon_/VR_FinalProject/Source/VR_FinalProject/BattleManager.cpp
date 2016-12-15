@@ -80,6 +80,10 @@ void ABattleManager::Tick(float DeltaTime)
 			{
 				mEmergencySwitch = true;
 			}
+			else if (mEnemyList[mCurrentEnemy]->didFaint()) //if enemy's pokemon fainted, choose new one
+			{
+				player2Switch();
+			}
 
 			mUpdating = true;
 		}
@@ -111,6 +115,11 @@ void ABattleManager::Tick(float DeltaTime)
 		}
 		else //continue loop
 		{
+			if (mpPlayer1->getPokemon()->didFaint()) //if player's pokemon fainted, choose new one
+			{
+				mEmergencySwitch = true;
+			}
+
 			mUpdating = true;
 		}
 	}
@@ -133,6 +142,23 @@ void ABattleManager::player2Attack()
 	mEnemyList[mCurrentEnemy]->useMove(move, mpPlayer1->getPokemon());
 }
 
+void ABattleManager::player2Switch()
+{
+	bool exit = false;
+
+	while (exit == false)
+	{
+		int num = randomNumber(0, mEnemyList.Num() - 1);
+
+		if (!mEnemyList[num]->didFaint())
+		{
+			mCurrentEnemy = num;
+			exit = true;
+		}
+	}
+
+	GLog->Log("The enemy sent out " + mEnemyList[mCurrentEnemy]->mName.ToString() + "!");
+}
 
 bool ABattleManager::isP1Faster()
 {

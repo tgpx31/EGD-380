@@ -24,6 +24,7 @@ public:
 	void player1Attack();
 	void player1Switch();
 	void player2Attack();
+	void player2Switch();
 
 	bool isP1Faster();
 	bool isEnemyDefeated();
