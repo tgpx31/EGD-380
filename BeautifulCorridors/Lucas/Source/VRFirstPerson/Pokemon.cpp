@@ -3,22 +3,37 @@
 #include "VRFirstPerson.h"
 #include "Pokemon.h"
 
-
-// Sets default values
 APokemon::APokemon()
 {
- 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+}
+
+// Sets default values
+APokemon::APokemon(const FObjectInitializer& ObjectInitializer)
+{
+	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	StaticMeshComponent = ObjectInitializer.CreateAbstractDefaultSubobject<UStaticMeshComponent>(this, TEXT("MyMesh"));
+
+	pokemonAsset = Cast<UStaticMesh>(ObjectInitializer.CreateDefaultSubobject<UStaticMeshComponent>(this, TEXT("Mesh")));
+	RootComponent = StaticMeshComponent;
 
 	//RootComponent = PokemonMeshComponent;
 
 }
 
+void APokemon::initMesh(FString filepath)
+{
+	pokemonAsset = Cast<UStaticMesh>(StaticLoadObject(UStaticMesh::StaticClass(), NULL, *filepath)); //static ConstructorHelpers::FObjectFinder<UStaticMesh>(pokemonAsset) ((*filepath));//
+	StaticMeshComponent->SetStaticMesh(pokemonAsset);
+}
+
 // Called when the game starts or when spawned
 void APokemon::BeginPlay()
 {
+	RootComponent = StaticMeshComponent;
+	pokemonAsset->AddToRoot();
+	StaticMeshComponent->SetMobility(EComponentMobility::Movable);
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
@@ -184,4 +199,53 @@ void APokemon::displayMoveList()
 int randomNumber(int min, int max)
 {
 	return min + (rand() % static_cast<int>(max - min + 1));
+}
+
+Type APokemon::getTypeFromData(int32 type)
+{
+	switch (type)
+	{
+	case 0: return Type::normal;
+		break;
+	case 1: return Type::fighting;
+		break;
+	case 2: return Type::flying;
+		break;
+	case 3: return Type::poison;
+		break;
+	case 4: return Type::ground;
+		break;
+	case 5: return Type::rock;
+		break;
+	case 6: return Type::bug;
+		break;
+	case 7: return Type::ghost;
+		break;
+	case 8: return Type::fire;
+		break;
+	case 9: return Type::water;
+		break;
+	case 10: return Type::grass;
+		break;
+	case 11: return Type::electric;
+		break;
+	case 12: return Type::psychic;
+		break;
+	case 13: return Type::ice;
+		break;
+	case 14: return Type::dragon;
+		break;
+	case 15: return Type::dark;
+		break;
+	case 16: return Type::NONE;
+		break;
+	default: return Type::NONE;
+		break;
+	}
+}
+
+void APokemon::setTypes(int32 type1, int32 type2)
+{
+	mType.Add(getTypeFromData(type1));
+	mType.Add(getTypeFromData(type2));
 }

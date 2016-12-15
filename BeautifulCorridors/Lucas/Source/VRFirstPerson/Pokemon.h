@@ -14,10 +14,15 @@ class VRFIRSTPERSON_API APokemon : public APawn
 {
 	GENERATED_BODY()
 
+	private_subobject:
+	class UStaticMeshComponent* StaticMeshComponent;
+	class UStaticMesh* pokemonAsset;
+
 public:
 	// Sets default values for this pawn's properties
 	APokemon();
-
+	APokemon::APokemon(const FObjectInitializer& ObjectInitializer);
+	void initMesh(FString filepath);
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	
@@ -36,6 +41,9 @@ public:
 	float calcResistance(Type moveType, APokemon* other);
 
 	void displayMoveList();
+
+	static Type getTypeFromData(int32 type);
+	void setTypes(int32 type1, int32 type2);
 
 	///* The mesh component */
 	//UPROPERTY(Category = Meshes, EditAnywhere, BlueprintReadWrite)
