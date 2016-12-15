@@ -148,7 +148,7 @@ void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& Init
 				[
 					Locals::MakeButton(LOCTEXT("ButtonLabel_CH", "Create Charizard"), FString("Charizard"))
 				]
-			+ SVerticalBox::Slot()
+			/*+ SVerticalBox::Slot()
 				.HAlign(HAlign_Left)
 				.AutoHeight()
 				[
@@ -159,7 +159,7 @@ void FConfigEditorPluginEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& Init
 				.AutoHeight()
 				[
 					Locals::MakeButton(LOCTEXT("ButtonLabel_RC", "Create Raichu"), FString("Raichu"))
-				]
+				]*/
 		];
 		
 	FModeToolkit::Init(InitToolkitHost);
