@@ -11,7 +11,8 @@ UMenuComponent::UMenuComponent()
 	// off to improve performance if you don't need them.
 	bWantsBeginPlay = true;
 	PrimaryComponentTick.bCanEverTick = true;
-
+	setMenuState(EMenuState::MENU_STATE_RIGHT);
+	setMenuScreen(EMenuScreens::MENU_SCREEN_BASE);
 	// ...
 }
 

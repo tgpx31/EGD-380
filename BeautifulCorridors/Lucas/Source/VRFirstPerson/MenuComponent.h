@@ -11,10 +11,18 @@ enum class EMenuState : uint8
 	MENU_STATE_LEFT UMETA(DisplayName="Left"),
 	MENU_STATE_RIGHT UMETA(DisplayName = "Right"),
 	MENU_STATE_TOP UMETA(DisplayName = "Top"),
-	MENU_STATE_BOTTOM UMETA(DisplayName = "Bottom"),
+	MENU_STATE_BOTTOM UMETA(DisplayName = "Bottom")
 };
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UENUM(BlueprintType)
+enum class EMenuScreens : uint8
+{
+	MENU_SCREEN_BASE UMETA(DisplayName="Base"),
+	MENU_SCREEN_MOVES UMETA(DisplayName="Moves"),
+	MENU_SCREEN_POKEMON UMETA(DisplayName="Pokemon")
+};
+
+UCLASS(meta=(BlueprintSpawnableComponent) )
 class VRFIRSTPERSON_API UMenuComponent : public UActorComponent
 {
 	GENERATED_BODY()
@@ -29,10 +37,20 @@ public:
 	// Called every frame
 	virtual void TickComponent( float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction ) override;
 
+	//Accessors and setters
 	UFUNCTION(BlueprintCallable, category="Enum")
 		EMenuState getMenuState() { return mEMenuState; };
 	
+	UFUNCTION(BlueprintCallable, category = "Enum")
+		void setMenuState(EMenuState menuState) { mEMenuState = menuState; };
+
+	UFUNCTION(BlueprintCallable, category = "Enum")
+		EMenuScreens getMenuScreen() { return mEMenuScreen; };
+
+	UFUNCTION(BlueprintCallable, category = "Enum")
+		void setMenuScreen(EMenuScreens menuScreen) { mEMenuScreen = menuScreen; };
 
 private:
 	EMenuState mEMenuState;
+	EMenuScreens mEMenuScreen;
 };
