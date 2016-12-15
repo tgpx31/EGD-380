@@ -22,6 +22,7 @@ public:
 	virtual void Tick( float DeltaSeconds ) override;
 
 	void player1Attack();
+	void player1Switch();
 	void player2Attack();
 
 	bool isP1Faster();
@@ -36,4 +37,5 @@ public:
 	int mCurrentEnemy;
 
 	bool mUpdating;
+	bool mEmergencySwitch;
 };
