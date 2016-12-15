@@ -30,9 +30,9 @@ void APokemon::initMesh(FString filepath)
 // Called when the game starts or when spawned
 void APokemon::BeginPlay()
 {
-	RootComponent = StaticMeshComponent;
-	pokemonAsset->AddToRoot();
-	StaticMeshComponent->SetMobility(EComponentMobility::Movable);
+	//RootComponent = StaticMeshComponent;
+	//pokemonAsset->AddToRoot();
+	//StaticMeshComponent->SetMobility(EComponentMobility::Movable);
 	Super::BeginPlay();
 }
 
