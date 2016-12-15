@@ -12,6 +12,7 @@ ABattleManager::ABattleManager()
 	mUpdating = true;
 	mEmergencySwitch = false;
 	mCurrentEnemy = 0;
+	str = "reee eee eee eee eee eee eee \n eee eee eee eee";
 }
 
 // Called when the game starts or when spawned
@@ -68,11 +69,11 @@ void ABattleManager::Tick(float DeltaTime)
 		//check win/lose states
 		if (isEnemyDefeated())
 		{
-			GLog->Log("You win!");
+			mpPlayer1->mPokemonList[mpPlayer1->mCurrentPokemon]->mBattleInfo = "\n\nYou win!";
 		}
 		else if (mpPlayer1->rosterDead())
 		{
-			GLog->Log("You lose!");
+			mpPlayer1->mPokemonList[mpPlayer1->mCurrentPokemon]->mBattleInfo = "\n\nYou lose!";
 		}
 		else //continue loop
 		{
@@ -153,6 +154,25 @@ void ABattleManager::player2Switch()
 		if (!mEnemyList[num]->didFaint())
 		{
 			mCurrentEnemy = num;
+
+			if (mCurrentEnemy == 0)
+			{
+				FVector up = mEnemyList[1]->GetActorLocation();
+				FVector down = mEnemyList[0]->GetActorLocation();
+
+				mEnemyList[1]->SetActorLocation(down);
+				mEnemyList[0]->SetActorLocation(up);
+			}
+			else
+			{
+				FVector up = mEnemyList[0]->GetActorLocation();
+				FVector down = mEnemyList[1]->GetActorLocation();
+
+				mEnemyList[1]->SetActorLocation(up);
+				mEnemyList[0]->SetActorLocation(down);
+			}
+
+
 			exit = true;
 		}
 	}
@@ -186,4 +206,43 @@ bool ABattleManager::isEnemyDefeated()
 	}
 
 	return dead;
+}
+
+void ABattleManager::setPokemon()
+{
+	if (mpPlayer1->mCurrentPokemon == 0)
+	{
+		FVector newLoc = mpPlayer1->mPokemonList[1]->GetActorLocation();
+		newLoc.Z = -1220;
+		mpPlayer1->mPokemonList[1]->SetActorLocation(newLoc, false);
+	}
+	else
+	{
+		FVector newLoc = mpPlayer1->mPokemonList[0]->GetActorLocation();
+		newLoc.Z = -1220;
+		mpPlayer1->mPokemonList[0]->SetActorLocation(newLoc, false);
+	}
+
+	if (mCurrentEnemy == 0)
+	{
+		FVector newLoc = mEnemyList[1]->GetActorLocation();
+		newLoc.Z = -1220;
+		mEnemyList[1]->SetActorLocation(newLoc, false);
+	}
+	else	
+	{
+		FVector newLoc = mEnemyList[0]->GetActorLocation();
+		newLoc.Z = -1220;
+		mEnemyList[0]->SetActorLocation(newLoc, false);
+	}
+}
+
+void ABattleManager::switchPokemon()
+{
+	mpPlayer1->switchPokemonToOther();
+}
+
+void ABattleManager::setNewPokemonLocation(FVector newLoc)
+{
+	mpPlayer1->mPokemonList[mpPlayer1->mCurrentPokemon]->SetActorLocation(newLoc);
 }

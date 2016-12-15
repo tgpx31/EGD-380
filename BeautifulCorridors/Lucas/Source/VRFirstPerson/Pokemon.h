@@ -88,7 +88,9 @@ public:
 	const static int LEVEL = 100;
 	const static int MIN_ACCURACY = 0;
 	const static int MIN_RAND_NUM = 85;
-	const static int MAX_RAND_NUM = 100;		
+	const static int MAX_RAND_NUM = 100;
+
+	FString mBattleInfo;
 };
 
 int randomNumber(int min, int max);

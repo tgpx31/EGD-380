@@ -145,9 +145,60 @@ void ATrainer::promptSwitch()
 
 void ATrainer::switchPokemon()
 {
+	//check if pokemon has fainted to prevent switch
+	if (mPokemonList[!mCurrentPokemon]->didFaint())
+		return;
+
+	//dont switch if pokemon is the current one out
+	if (mCurrentPokemon == mCurrentInput - 1)
+		return;
+
+	if (mCurrentPokemon == 0)
+	{
+		FVector up = mPokemonList[0]->GetActorLocation();
+		FVector down = mPokemonList[1]->GetActorLocation();
+
+		mPokemonList[0]->SetActorLocation(down);
+		mPokemonList[1]->SetActorLocation(up);
+	}
+	else
+	{
+		FVector up = mPokemonList[1]->GetActorLocation();
+		FVector down = mPokemonList[0]->GetActorLocation();
+
+		mPokemonList[0]->SetActorLocation(up);
+		mPokemonList[1]->SetActorLocation(down);
+	}
+
 	mCurrentPokemon = mCurrentInput - 1;
 
 	GLog->Log("You switched to " + mPokemonList[mCurrentPokemon]->mName.ToString() + "!");
+}
+
+void ATrainer::switchPokemonToOther()
+{
+	//check if pokemon has fainted to prevent switch
+	if (mPokemonList[!mCurrentPokemon]->didFaint())
+		return;
+
+	if (mCurrentPokemon == 0)
+	{
+		FVector up = mPokemonList[0]->GetActorLocation();
+		FVector down = mPokemonList[1]->GetActorLocation();
+
+		mPokemonList[0]->SetActorLocation(down);
+		mPokemonList[1]->SetActorLocation(up);
+	}
+	else
+	{
+		FVector up = mPokemonList[1]->GetActorLocation();
+		FVector down = mPokemonList[0]->GetActorLocation();
+
+		mPokemonList[0]->SetActorLocation(up);
+		mPokemonList[1]->SetActorLocation(down);
+	}
+
+	mCurrentPokemon = !mCurrentPokemon;
 }
 
 void ATrainer::resetBools()

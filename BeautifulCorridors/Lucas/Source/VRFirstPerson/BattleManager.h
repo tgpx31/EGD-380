@@ -26,6 +26,8 @@ public:
 	void player2Attack();
 	void player2Switch();
 
+	FString str;
+
 	bool isP1Faster();
 	bool isEnemyDefeated();
 
@@ -39,4 +41,16 @@ public:
 
 	bool mUpdating;
 	bool mEmergencySwitch;
+
+	UFUNCTION(BlueprintCallable, Category = "Sin")
+		FString getDamageInfo() { return mpPlayer1->mPokemonList[mpPlayer1->mCurrentPokemon]->mBattleInfo; }
+
+	UFUNCTION(BlueprintCallable, Category = "Sin")
+		void setPokemon();
+
+	UFUNCTION(BlueprintCallable, Category = "Sin")
+		void switchPokemon();
+
+	UFUNCTION(BlueprintCallable, Category = "Sin")
+		void setNewPokemonLocation(FVector newLoc);
 };
